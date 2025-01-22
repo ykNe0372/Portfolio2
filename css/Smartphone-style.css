@@ -114,6 +114,25 @@
         width: 100%;
     }
 
+    .split {
+        display: table;
+        width: 100%;
+    }
+    .split-item {
+        display: table-cell;
+    }
+    .split-left {
+        width: 100%;
+    }
+    .split-right {
+        display: none;
+    }
+    .split-solid {
+        height: 100%;
+        padding: 8% 0;
+        position: fixed;
+    }
+
     .chapter-title {
         text-transform: uppercase;
         text-align: center;
@@ -142,7 +161,6 @@
     .horizontal {
         display: flex;
     }
-
     .horizontal img {
         max-width: 200px;
         margin-left: auto;
@@ -150,7 +168,6 @@
         overflow: hidden;
         position: relative;
     }
-
     .horizontal p {
         margin: 20px 0 0 20px;
         padding: 0;
@@ -159,7 +176,6 @@
     .his-content {
         margin: 20px 0 0 30px;
     }
-
     .his-content:before {
         content: "";
         position: absolute;
@@ -173,7 +189,6 @@
     .border-style {
         list-style: none;
     }
-
     .border-style:before {
         content: "";
         position: relative;
@@ -195,7 +210,6 @@
     .container {
         display: flex;
     }
-
     .container img {
         max-width: 100%;
         margin: 0 1.5% 1.5% 0;
@@ -206,7 +220,6 @@
         height: 270px;
         position: relative;
     }
-
     .mv-item {
         position: absolute;
         top: 0;
@@ -216,19 +229,15 @@
         animation: img-change 15s infinite;
         opacity: 0;
     }
-
     .mv-item:nth-child(1) {
         animation-delay: 0s;
     }
-
     .mv-item:nth-child(2) {
         animation-delay: 5s;
     }
-
     .mv-item:nth-child(3) {
         animation-delay: 10s;
     }
-
     .mv-item img {
         object-fit: cover;
     }
@@ -237,23 +246,18 @@
         0% {
             opacity: 0;
         }
-
         10% {
             opacity: 1;
         }
-
         20% {
             opacity: 1;
         }
-
         30% {
             opacity: 1;
         }
-
         40% {
             opacity: 0;
         }
-
         100% {
             opacity: 0;
         }
@@ -269,7 +273,6 @@
         margin-top: 8%;
         margin-bottom: 50px;
     }
-
     .grid-item img {
         max-width: 220px;
         max-height: 220px;
@@ -284,7 +287,6 @@
             transform-origin: right bottom;
             transform: rotate(-60deg);
         }
-
         100% {
             opacity: 1;
             transform-origin: right bottom;
@@ -312,7 +314,6 @@
         align-items: center;
         z-index: 2;
     }
-
     .pagetop_arrow {
         height: 10px;
         width: 10px;
