@@ -12,6 +12,6 @@ window.addEventListener('load', function() {
     animation();
     sessionStorage.setItem('isFirstLoad', 'true');
   } else {
-    loading.classList.add('loaded');
+    loading.style.display = 'none';
   }
 });
