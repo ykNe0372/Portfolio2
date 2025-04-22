@@ -224,6 +224,51 @@ aside {
     margin: 0 1.5% 1.5% 0;
 }
 
+.details-summary {
+    position: relative;
+	display: block;
+	.btn {
+		position: absolute;
+		top: 25%;
+		right: 5%;
+		width: 18px;
+		height: 18px;
+		transform-origin: center center;
+		transition-duration: 0.2s;
+
+		&:before,
+		&:after {
+			content: "";
+			background-color: #00A5BF;
+			border-radius: 10px;
+			width: 18px;
+			height: 4px;
+			position: absolute;
+			top: 7px;
+			left: 0;
+			transform-origin: center center;
+		}
+		&:before {
+			width: 4px;
+			height: 18px;
+			top: 0;
+			left: 7px;
+		}
+	}
+	&.is-active {
+		.btn {
+			-webkit-transform: rotate(-180deg);
+			transform: rotate(-180deg);
+			&:before {
+				content: none;
+			}
+		}
+	}
+}
+.details-summary::-webkit-details-marker {
+	display: none;
+}
+
 .mv {
     width: 60%;
     height: 470px;
