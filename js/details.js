@@ -3,6 +3,14 @@ let accordionSummary = '.js-details-summary';
 let accordionContent = '.js-details-content';
 let speed = 300
 
+$(document).ready(function() {
+  // 初期状態で「－」を表示するために、すべてのaccordionSummaryにis-activeクラスを付与
+  $(accordionSummary).addClass("is-active");
+
+  // 初期状態でアコーディオンを開いた状態にする
+  $(accordionDetails).attr("open", "true");
+});
+
 $(accordionSummary).each(function() {
   $(this).on("click", function(event) {
   	// デフォルトの挙動を無効化
