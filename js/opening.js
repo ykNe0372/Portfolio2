@@ -21,7 +21,7 @@ const storage = sessionStorage;
 
     if (!storage.getItem(keyName)) {
       storage.setItem(keyName, keyValue);
-
+      $('.loading').remove();
       $('.page-title').remove();
       $('.page-subtitle').remove();
       (function () {
