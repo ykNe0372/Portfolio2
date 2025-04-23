@@ -48,6 +48,12 @@ img {
     border-radius: 10px;
 }
 
+video {
+    max-width: 100%;
+    width: auto;
+    border-radius: 10px;
+}
+
 ul {
     position: relative;
 }
@@ -131,7 +137,7 @@ li {
     width: 40px;
     height: 40px;
     position: relative;
-    animation: sk-chase 2.5s infinite linear both;
+    animation: sk-chase 1.5s infinite linear both;
 }
 .sk-chase-dot {
     width: 100%;
@@ -282,6 +288,13 @@ aside {
 }
 
 /* ----- works ----- */
+.topbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
 .works-title {
     font-size: 1.6rem;
     margin: 5% 0 2% 0;
@@ -293,7 +306,11 @@ aside {
     display: flex;
 }
 .container img {
-    max-width: 60%;
+    max-width: 75%;
+    margin: 3% 1.5% 5% 0;
+}
+.container video {
+    max-width: 75%;
     margin: 3% 1.5% 5% 0;
 }
 
