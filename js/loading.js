@@ -7,11 +7,4 @@ function animation() {
 }
 
 //画面が読み込まれたら animation を呼び出す
-window.addEventListener('load', function() {
-  if (!isFirstLoad) {
-    animation();
-    sessionStorage.setItem('isFirstLoad', true);
-  } else {
-    loading.style.display = 'none';
-  }
-});
+window.addEventListener('load', animation);
