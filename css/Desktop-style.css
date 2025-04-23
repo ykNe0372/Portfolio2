@@ -108,9 +108,30 @@ li {
 
 .page-title {
     font-size: 3rem;
+    line-height: 1.2;
+    letter-spacing: .50rem;
+}
+.page-subtitle {
+    line-height: 2;
+    font-size: 1.2rem;
+    margin-top: 0.8rem;
+    letter-spacing: .30rem;
+}
+.title-wrapper {
+    position: relative;
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 10rem;
 }
 
 /* ----- opening animation ----- */
+.l-inner {
+    text-align: center;
+    margin-top: 5%;
+}
+
 .c-loader-bg {
     position: fixed;
     top: 0;
@@ -148,9 +169,18 @@ li {
 }
 
 .c-mv_tit-item {
-    font-size: 3rem;
+    font-size: 40px;
     line-height:1.2;
     letter-spacing: .50rem;
+}
+
+.c-mv_tit-wrap {
+    position: relative;
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 10rem;
 }
 
 .c-mv_tit-item span {
@@ -159,7 +189,7 @@ li {
 }
 .c-mv_tit-read {
     line-height: 2;
-    font-size: 1rem;
+    font-size: 1.2rem;
     margin-top: 0.8rem;
     letter-spacing: .30rem;
 }
