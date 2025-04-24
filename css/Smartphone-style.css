@@ -80,8 +80,9 @@
         margin-top: 5%;
     }
     .home-content p {
+        text-align: center;
         font-size: 1.125rem;
-        margin: 10px 0 0;
+        margin: 10px 12.5px;
     }
 
     .page-title {
