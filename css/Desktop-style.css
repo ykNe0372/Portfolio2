@@ -372,13 +372,6 @@ aside {
 }
 
 /* ----- works ----- */
-.topbar {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 20px;
-}
-
 .works-title {
     font-size: 1.6rem;
     margin: 5% 0 2% 0;
@@ -444,54 +437,6 @@ aside {
 }
 .details-summary::-webkit-details-marker {
 	display: none;
-}
-
-.mv {
-    width: 60%;
-    height: 470px;
-    position: relative;
-}
-.mv-item {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    animation: img-change 15s infinite;
-    opacity: 0;
-}
-.mv-item:nth-child(1) {
-    animation-delay: 0s;
-}
-.mv-item:nth-child(2) {
-    animation-delay: 5s;
-}
-.mv-item:nth-child(3) {
-    animation-delay: 10s;
-}
-.mv-item img {
-    object-fit: cover;
-}
-
-@keyframes img-change {
-    0% {
-        opacity: 0;
-    }
-    10% {
-        opacity: 1;
-    }
-    20% {
-        opacity: 1;
-    }
-    30% {
-        opacity: 1;
-    }
-    40% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 0;
-    }
 }
 
 /* ----- skills ----- */
