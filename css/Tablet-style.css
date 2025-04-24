@@ -283,8 +283,12 @@
         display: flex;
     }
     .container img {
-        max-width: 60%;
-        margin: 0 1.5% 1.5% 0;
+        max-width: 75%;
+        margin: 3% 1.5% 5% 0;
+    }
+    .container video {
+        max-width: 75%;
+        margin: 3% 1.5% 5% 0;
     }
 
     .mv {

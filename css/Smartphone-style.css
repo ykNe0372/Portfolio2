@@ -292,7 +292,9 @@
     }
     .container img {
         max-width: 100%;
-        margin: 0 1.5% 1.5% 0;
+    }
+    .container video {
+        max-width: 100%;
     }
 
     .mv {
