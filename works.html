@@ -211,16 +211,21 @@
                 <i class="fa-solid fa-list-check"></i> <i class="fa-brands fa-react"></i> TodoApp
               </h3>
             </summary>
-            <div class="mv">
-              <div class="mv-item"><img src="img/samples/Todo_1.png" /></div>
-              <div class="mv-item"><img src="img/samples/Todo_2.png" /></div>
-              <div class="mv-item"><img src="img/samples/Todo_3.png" /></div>
+            <div class="container details-content js-details-content">
+              <img src="img/samples/Todo_1.png" />
             </div>
             <p>
               React、TypeScript、Tailwind CSSを用いて、TodoAppを作成しました。
               タスクの追加/編集/削除に加え、ローカルストレージでデータを永続化しています。<br />
               モーダルウィンドウを用いることで簡潔なデザインにまとめ、分かりやすいデザインになるように心掛けました。<br />
+              <div class="container details-content js-details-content">
+                <img src="img/samples/Todo_2.png" />
+              </div>
               また、ユーザーが自由にメモできるような備考欄も実装しました。<br />
+              記入は任意ですが、タスクの内容を詳しく記入することで、タスクの内容を忘れにくくなると思います。<br />
+              <div class="container details-content js-details-content">
+                <img src="img/samples/Todo_3.png" />
+              </div>
               今回開発に用いたReact、TypeScriptは初めて使用したので非常に苦しかったですが、形になって良かったです！<br />
               時間がかかった要素は、編集機能の実装です。想定していたよりも遥かに難しくて大変でした...<br /><br />
 
@@ -397,14 +402,41 @@
                 <i class="fa-brands fa-discord"></i> <i class="fa-brands fa-python"></i> ひまつぶしbotくん
               </h3>
             </summary>
+            <div class="container details-content js-details-content">
+              <img src="img/samples/bot_prof.png" />
+            </div>
             <p>
-              （現在bot制作中の為、まだ工事中です）<br />
-              人狼や大富豪、ギャンブルが行えるbot。<br /><br />
+              Pythonを使用して、Discord で暇つぶしが出来る bot を作成しました。
+              現在、ルーレットやブラックジャックによるギャンブル、人狼ゲームが実装されています！<br />
+              便利機能として、チップを管理できるバンク機能、デイリー報酬機能、他人にチップを渡す／他人からチップを奪う機能などが実装されています。
+            </p>
+            <div class="container details-content js-details-content">
+              <img src="img/samples/bot_commands.png" />
+            </div>
+            <p>
+              こだわりポイントとして、各人がバラバラに実行すると自分の手札がどれか分からなくなるという意見があったため、
+              ブラックジャックに複数人同時に遊ぶモードを実装しました。
+              管理するべき要素が非常に多く、とても実装が難しかったです...！
+            </p>
+              <div class="container details-content js-details-content">
+                <video src="video/multi_bj.mp4" controls muted></video>
+              </div>
+            <p>
+              また、bot の更新時にチップが無くなってしまうという不具合が発生してしまったのですが、
+              Dropbox にチップを保存するシステムを実装することで解決しました。
+              TOKEN の取得が難しくかなり苦戦しましたが、生成AIを活用して実装することが出来ました！<br />
+              1サーバーでしか使用することを想定していないので現状は問題ありませんが、
+              インターネット上に公開して様々なサーバーでも動作させるには、保存処理を改善する必要がありそうです。
+            </p>
+              <div class="container details-content js-details-content">
+                <video src="video/blackjack.mp4" controls muted></video>
+              </div>
 
+            <p>
               <i class="fa-regular fa-clock"></i> 制作期間:
-              ？？？<br />
+              1ヶ月（5月上旬～5月末）<br />
               <i class="fa-solid fa-wrench"></i> 開発:
-              Discord.py、Dropbox、Github Copilot、chatGPT<br />
+              Python、Discord.py、Dropbox、Github Copilot、chatGPT<br />
             </p>
           </details>
         </article>
@@ -438,6 +470,9 @@
           ><br />
           <a href="#u1_2" class="underline_anim"
             ><i class="fa-solid fa-ice-cream"></i> <i class="fa-brands fa-unity"></i> Ice Hopper</a
+          ><br />
+          <a href="#bot" class="underline_anim"
+            ><i class="fa-brands fa-discord"></i> <i class="fa-brands fa-python"></i> ひまつぶしbotくん</a
           ><br />
         </aside>
       </div>
