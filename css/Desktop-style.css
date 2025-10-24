@@ -270,10 +270,8 @@ li {
 /* ----- main ----- */
 
 article {
-    width: 65%;
-}
-aside {
-    width: 30%;
+    width: 90%;
+    margin: 0 auto;
 }
 
 .split {
@@ -378,17 +376,27 @@ aside {
     padding-bottom: 1.5%;
     border-bottom: 4px dotted #00A5BF;
 }
+.works-title-position {
+    display: flex;
+    width: 90%;
+    justify-content: space-between;
+}
+.tool-position {
+    margin: auto 0;
+}
 
 .container {
     display: flex;
 }
 .container img {
     max-width: 75%;
-    margin: 3% 1.5% 5% 0;
+    margin: 3% auto;
+    display: flex;
 }
 .container video {
     max-width: 75%;
-    margin: 3% 1.5% 5% 0;
+    margin: 3% auto;
+    display: flex;
 }
 
 .details-summary {
@@ -446,7 +454,7 @@ aside {
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     grid-column: auto;
     grid-row: auto;
-    margin-top: 6%;
+    margin-top: 2%;
     margin-bottom: 50px;
 }
 .grid-item img {
