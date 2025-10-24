@@ -8,7 +8,7 @@
     }
 
     html {
-        font-size: 100%;
+        font-size: 80%;
         scroll-behavior: smooth;
     }
 
@@ -189,8 +189,7 @@
 
     /* ----- main ----- */
 
-    article,
-    aside {
+    article {
         width: 100%;
     }
 
@@ -253,32 +252,46 @@
         padding: 0;
     }
 
-    .his-content {
-        margin: 20px 0 0 30px;
+    .history-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        position: relative;
     }
-    .his-content:before {
+    .history-list::before {
         content: "";
         position: absolute;
-        left: -2.4%;
-        top: -2%;
+        top: 0;
+        bottom: 0;
+        left: 6rem; /* 日付の幅に合わせて調整 */
+        width: 2px;
         background: #00A5BF;
-        width: 3px;
-        height: 110%;
+        transform: translateX(-50%);
     }
-
-    .border-style {
-        list-style: none;
-    }
-    .border-style:before {
-        content: "";
+    .history-item {
         position: relative;
-        left: -3%;
-        top: 0%;
+        padding-left: 8rem; /* 縦線より右側に配置 */
+        margin-bottom: 2rem;
+    }
+    .history-item::before {
+        content: "";
+        position: absolute;
+        left: 6rem; /* 縦線の中央に配置 */
+        top: 0.4em; /* テキストの高さに合わせて微調整 */
         width: 10px;
         height: 10px;
-        display: inline-block;
         border-radius: 50%;
         background: #00A5BF;
+        transform: translateX(-50%);
+    }
+    .history-item.no-dot::before {
+        display: none;
+    }
+    .history-date {
+        position: absolute;
+        left: 0;
+        width: 5rem; /* 日付の表示幅 */
+        text-align: right;
     }
 
     /* ----- works ----- */
