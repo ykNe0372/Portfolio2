@@ -227,7 +227,7 @@
     .chapter-title {
         text-transform: uppercase;
         text-align: center;
-        font-size: 2.5rem;
+        font-size: 2.3rem;
         font-weight: bold;
         border-bottom: 4px dotted #00A5BF;
         margin-bottom: 5%;
@@ -269,7 +269,7 @@
     .history-list {
         list-style: none;
         padding: 0;
-        margin: 0;
+        margin-bottom: 55px;
         position: relative;
     }
 

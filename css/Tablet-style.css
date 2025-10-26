@@ -245,7 +245,7 @@
     .history-list {
         list-style: none;
         padding: 0;
-        margin: 0;
+        margin-bottom: 50px;
         position: relative;
     }
     .history-list::before {
