@@ -57,18 +57,18 @@
     /* ----- hedaer ----- */
     .title {
         margin-top: 28px;
-        font-size: 1.5rem;
+        font-size: 1.8rem;
     }
 
     .main-nav {
         display: flex;
-        font-size: 1.2rem;
+        font-size: 1.5rem;
         margin-top: 10px;
         list-style: none;
     }
 
     .main-nav li {
-        margin: 0 30px;
+        margin: 0 20px;
     }
 
     .main-nav a {
@@ -85,6 +85,7 @@
         text-align: center;
         margin-top: 5%;
     }
+
     .home-content p {
         text-align: center;
         font-size: 1.125rem;
@@ -96,12 +97,14 @@
         line-height: 1.2;
         letter-spacing: .50rem;
     }
+
     .page-subtitle {
         line-height: 2;
         font-size: 1rem;
         margin-top: 0.8rem;
         letter-spacing: .30rem;
     }
+
     .title-wrapper {
         text-align: center;
         position: relative;
@@ -133,18 +136,21 @@
         place-items: center;
         pointer-events: none;
     }
+
     .c-optext {
         display: inline-flex;
         align-items: center;
         justify-content: start;
         pointer-events: none;
     }
+
     .c-optext>span {
         display: block;
         font-size: 2rem;
         font-size: bold;
         color: #fffef9;
     }
+
     .c-optext>span+span {
         margin-left: 1rem;
     }
@@ -158,9 +164,10 @@
 
     .c-mv_tit-item {
         font-size: 2rem;
-        line-height:1.2;
+        line-height: 1.2;
         letter-spacing: .50rem;
     }
+
     .c-mv_title {
         text-align: center;
     }
@@ -180,6 +187,7 @@
         /* transformプロパティを有効にするため */
         display: inline-block;
     }
+
     .c-mv_tit-read {
         line-height: 2;
         font-size: 19.2px;
@@ -197,15 +205,19 @@
         display: table;
         width: 100%;
     }
+
     .split-item {
         display: table-cell;
     }
+
     .split-left {
         width: 100%;
     }
+
     .split-right {
         display: none;
     }
+
     .split-solid {
         height: 100%;
         padding: 8% 0;
@@ -215,9 +227,9 @@
     .chapter-title {
         text-transform: uppercase;
         text-align: center;
-        font-size: 1.5rem;
+        font-size: 2.5rem;
         font-weight: bold;
-        border-bottom: 4px dotted #0bd;
+        border-bottom: 4px dotted #00A5BF;
         margin-bottom: 5%;
     }
 
@@ -240,6 +252,7 @@
     .horizontal {
         display: flex;
     }
+
     .horizontal img {
         max-width: 200px;
         margin-left: auto;
@@ -247,6 +260,7 @@
         overflow: hidden;
         position: relative;
     }
+
     .horizontal p {
         margin: 20px 0 0 20px;
         padding: 0;
@@ -258,56 +272,131 @@
         margin: 0;
         position: relative;
     }
+
     .history-list::before {
         content: "";
         position: absolute;
         top: 0;
         bottom: 0;
-        left: 6rem; /* 日付の幅に合わせて調整 */
+        left: 6rem;
+        /* 日付の幅に合わせて調整 */
         width: 2px;
         background: #00A5BF;
         transform: translateX(-50%);
     }
+
     .history-item {
         position: relative;
-        padding-left: 8rem; /* 縦線より右側に配置 */
+        padding-left: 8rem;
+        /* 縦線より右側に配置 */
         margin-bottom: 2rem;
     }
+
     .history-item::before {
         content: "";
         position: absolute;
-        left: 6rem; /* 縦線の中央に配置 */
-        top: 0.4em; /* テキストの高さに合わせて微調整 */
+        left: 6rem;
+        /* 縦線の中央に配置 */
+        top: 0.4em;
+        /* テキストの高さに合わせて微調整 */
         width: 10px;
         height: 10px;
         border-radius: 50%;
         background: #00A5BF;
         transform: translateX(-50%);
     }
+
     .history-item.no-dot::before {
         display: none;
     }
+
     .history-date {
         position: absolute;
         left: 0;
-        width: 5rem; /* 日付の表示幅 */
+        width: 5rem;
+        /* 日付の表示幅 */
         text-align: right;
     }
 
     /* ----- works ----- */
     .works-title {
-        font-size: 1.5rem;
+        font-size: 1.2rem;
         margin: 5% 0;
+    }
+
+    .works-title-position {
+        display: flex;
+        width: 90%;
+        justify-content: space-between;
+    }
+
+    .tool-position {
+        margin: auto 0;
     }
 
     .container {
         display: flex;
     }
+
     .container img {
         max-width: 100%;
     }
+
     .container video {
         max-width: 100%;
+    }
+
+    .details-summary {
+        position: relative;
+        display: block;
+
+        .btn {
+            position: absolute;
+            top: 25%;
+            right: 3%;
+            width: 18px;
+            height: 18px;
+            transform-origin: center center;
+            transition-duration: 0.2s;
+
+            &:after {
+                content: "";
+                background-color: #3da;
+                border-radius: 10px;
+                width: 15px;
+                height: 3px;
+                position: absolute;
+                top: 9px;
+                left: 0;
+                transform-origin: center center;
+            }
+
+            &:before {
+                content: "";
+                background-color: #3da;
+                border-radius: 10px;
+                width: 4px;
+                height: 18px;
+                position: absolute;
+                top: 0;
+                left: 7px;
+            }
+        }
+
+        &.is-active {
+            .btn {
+                -webkit-transform: rotate(-180deg);
+                transform: rotate(-180deg);
+
+                &:before {
+                    content: none;
+                }
+            }
+        }
+    }
+
+    .details-summary::-webkit-details-marker {
+        display: none;
     }
 
     .mv {
@@ -315,6 +404,7 @@
         height: 270px;
         position: relative;
     }
+
     .mv-item {
         position: absolute;
         top: 0;
@@ -324,15 +414,19 @@
         animation: img-change 15s infinite;
         opacity: 0;
     }
+
     .mv-item:nth-child(1) {
         animation-delay: 0s;
     }
+
     .mv-item:nth-child(2) {
         animation-delay: 5s;
     }
+
     .mv-item:nth-child(3) {
         animation-delay: 10s;
     }
+
     .mv-item img {
         object-fit: cover;
     }
@@ -341,18 +435,23 @@
         0% {
             opacity: 0;
         }
+
         10% {
             opacity: 1;
         }
+
         20% {
             opacity: 1;
         }
+
         30% {
             opacity: 1;
         }
+
         40% {
             opacity: 0;
         }
+
         100% {
             opacity: 0;
         }
@@ -368,6 +467,7 @@
         margin-top: 8%;
         margin-bottom: 50px;
     }
+
     .grid-item img {
         max-width: 220px;
         max-height: 220px;
@@ -382,11 +482,50 @@
             transform-origin: right bottom;
             transform: rotate(-60deg);
         }
+
         100% {
             opacity: 1;
             transform-origin: right bottom;
             transform: rotate(0);
         }
+    }
+
+    /* ----- links ----- */
+    .link-list {
+        display: flex;
+        justify-content: center;
+        gap: 50px;
+        list-style: none;
+        padding: 0;
+        margin-top: 20px;
+    }
+
+    .link-item a {
+        display: flex;
+        flex-direction: column;
+        /* アイコンとテキストを縦に並べる */
+        align-items: center;
+        /* 中央揃えにする */
+        gap: 8px;
+        /* アイコンとテキストの間のスペース */
+        transition: transform 0.3s ease;
+        /* ホバー時のアニメーション */
+    }
+
+    .link-item a:hover {
+        transform: scale(1.1);
+        /* ホバー時に少し拡大する */
+    }
+
+    .link-icon {
+        width: 80px;
+        height: 80px;
+        object-fit: contain;
+    }
+
+    .link-text {
+        font-size: 1rem;
+        margin: 0;
     }
 
     /* ----- footer ----- */
@@ -409,6 +548,7 @@
         align-items: center;
         z-index: 2;
     }
+
     .pagetop_arrow {
         height: 10px;
         width: 10px;

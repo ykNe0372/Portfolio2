@@ -302,7 +302,7 @@ article {
     text-align: center;
     font-size: 2rem;
     font-weight: bold;
-    border-bottom: 4px dotted #0bd;
+    border-bottom: 4px dotted #00A5BF;
     margin: 5% 0;
 }
 .sub-title {
@@ -388,7 +388,7 @@ article {
     font-size: 1.6rem;
     margin: 5% 0 2% 0;
     padding-bottom: 1.5%;
-    border-bottom: 4px dotted #00A5BF;
+    border-bottom: 4px dotted #3da;
 }
 .works-title-position {
     display: flex;
@@ -427,7 +427,7 @@ article {
 
 		&:after {
 			content: "";
-			background-color: #00A5BF;
+			background-color: #3da;
 			border-radius: 10px;
 			width: 18px;
 			height: 4px;
@@ -438,7 +438,7 @@ article {
 		}
 		&:before {
             content: "";
-            background-color: #00A5BF;
+            background-color: #3da;
             border-radius: 10px;
 			width: 4px;
 			height: 18px;
@@ -490,6 +490,35 @@ article {
         transform-origin: right bottom;
         transform: rotate(0);
     }
+}
+
+/* ----- links ----- */
+.link-list {
+    display: flex;
+    justify-content: center;
+    gap: 120px;
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+.link-item a {
+    display: flex;
+    flex-direction: column; /* アイコンとテキストを縦に並べる */
+    align-items: center; /* 中央揃えにする */
+    gap: 8px; /* アイコンとテキストの間のスペース */
+    transition: transform 0.3s ease; /* ホバー時のアニメーション */
+}
+.link-item a:hover {
+    transform: scale(1.1); /* ホバー時に少し拡大する */
+}
+.link-icon {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+}
+.link-text {
+    font-size: 1.2rem;
+    margin: 0;
 }
 
 /* ----- footer ----- */

@@ -286,7 +286,7 @@
 
     /* ----- works ----- */
     .works-title {
-        font-size: 1.6rem;
+        font-size: 1.4rem;
         margin: 5% 0 2% 0;
     }
 
@@ -379,6 +379,35 @@
             transform-origin: right bottom;
             transform: rotate(0);
         }
+    }
+
+    /* ----- links ----- */
+    .link-list {
+        display: flex;
+        justify-content: center;
+        gap: 120px;
+        list-style: none;
+        padding: 0;
+        margin-top: 20px;
+    }
+    .link-item a {
+        display: flex;
+        flex-direction: column; /* アイコンとテキストを縦に並べる */
+        align-items: center; /* 中央揃えにする */
+        gap: 8px; /* アイコンとテキストの間のスペース */
+        transition: transform 0.3s ease; /* ホバー時のアニメーション */
+    }
+    .link-item a:hover {
+        transform: scale(1.1); /* ホバー時に少し拡大する */
+    }
+    .link-icon {
+        width: 100px;
+        height: 100px;
+        object-fit: contain;
+    }
+    .link-text {
+        font-size: 1.2rem;
+        margin: 0;
     }
 
     /* ----- footer ----- */
