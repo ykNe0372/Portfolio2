@@ -270,10 +270,8 @@ li {
 /* ----- main ----- */
 
 article {
-    width: 65%;
-}
-aside {
-    width: 30%;
+    width: 90%;
+    margin: 0 auto;
 }
 
 .split {
@@ -304,7 +302,7 @@ aside {
     text-align: center;
     font-size: 2rem;
     font-weight: bold;
-    border-bottom: 4px dotted #0bd;
+    border-bottom: 4px dotted #00A5BF;
     margin: 5% 0;
 }
 .sub-title {
@@ -343,32 +341,46 @@ aside {
     padding: 0;
 }
 
-.his-content {
-    margin: 0 0 0 30px;
+.history-list {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 50px;
+    position: relative;
 }
-.his-content:before {
+.history-list::before {
     content: "";
     position: absolute;
-    left: -0.5%;
+    left: 7.5rem; /* 縦線の位置を調整 */
     top: -3%;
-    background: #00A5BF;
     width: 3px;
+    background: #00A5BF;
     height: 110%;
+    transform: translateX(-50%);
 }
-
-.border-style {
-    list-style: none;
-}
-.border-style:before {
-    content: "";
+.history-item {
     position: relative;
-    left: -3%;
-    top: 0%;
+    padding-left: 11rem; /* 縦線より右側に内容を配置 */
+    margin-bottom: 2rem;
+}
+.history-item::before {
+    content: "";
+    position: absolute;
+    left: 7.5rem; /* 縦線の中央に●を配置 */
+    top: 0.4em; /* テキストの高さに合わせて微調整 */
     width: 10px;
     height: 10px;
-    display: inline-block;
     border-radius: 50%;
     background: #00A5BF;
+    transform: translateX(-50%);
+}
+.history-item.no-dot::before {
+    display: none;
+}
+.history-date {
+    position: absolute;
+    left: 0;
+    width: 6rem;
+    text-align: right;
 }
 
 /* ----- works ----- */
@@ -376,7 +388,15 @@ aside {
     font-size: 1.6rem;
     margin: 5% 0 2% 0;
     padding-bottom: 1.5%;
-    border-bottom: 4px dotted #00A5BF;
+    border-bottom: 4px dotted #3da;
+}
+.works-title-position {
+    display: flex;
+    width: 90%;
+    justify-content: space-between;
+}
+.tool-position {
+    margin: auto 0;
 }
 
 .container {
@@ -384,11 +404,13 @@ aside {
 }
 .container img {
     max-width: 75%;
-    margin: 3% 1.5% 5% 0;
+    margin: 3% auto;
+    display: flex;
 }
 .container video {
     max-width: 75%;
-    margin: 3% 1.5% 5% 0;
+    margin: 3% auto;
+    display: flex;
 }
 
 .details-summary {
@@ -405,7 +427,7 @@ aside {
 
 		&:after {
 			content: "";
-			background-color: #00A5BF;
+			background-color: #3da;
 			border-radius: 10px;
 			width: 18px;
 			height: 4px;
@@ -416,7 +438,7 @@ aside {
 		}
 		&:before {
             content: "";
-            background-color: #00A5BF;
+            background-color: #3da;
             border-radius: 10px;
 			width: 4px;
 			height: 18px;
@@ -446,7 +468,7 @@ aside {
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     grid-column: auto;
     grid-row: auto;
-    margin-top: 6%;
+    margin-top: 2%;
     margin-bottom: 50px;
 }
 .grid-item img {
@@ -468,6 +490,35 @@ aside {
         transform-origin: right bottom;
         transform: rotate(0);
     }
+}
+
+/* ----- links ----- */
+.link-list {
+    display: flex;
+    justify-content: center;
+    gap: 120px;
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+.link-item a {
+    display: flex;
+    flex-direction: column; /* アイコンとテキストを縦に並べる */
+    align-items: center; /* 中央揃えにする */
+    gap: 8px; /* アイコンとテキストの間のスペース */
+    transition: transform 0.3s ease; /* ホバー時のアニメーション */
+}
+.link-item a:hover {
+    transform: scale(1.1); /* ホバー時に少し拡大する */
+}
+.link-icon {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+}
+.link-text {
+    font-size: 1.2rem;
+    margin: 0;
 }
 
 /* ----- footer ----- */

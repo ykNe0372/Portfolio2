@@ -180,10 +180,7 @@
     /* ----- main ----- */
 
     article {
-        width: 65%;
-    }
-    aside {
-        width: 30%;
+        width: 90%;
     }
 
     .split {
@@ -245,37 +242,51 @@
         padding: 0;
     }
 
-    .his-content {
-        margin: 0 0 0 30px;
+    .history-list {
+        list-style: none;
+        padding: 0;
+        margin-bottom: 50px;
+        position: relative;
     }
-    .his-content:before {
+    .history-list::before {
         content: "";
         position: absolute;
-        left: -1.4%;
-        top: -3%;
-        background: #00A5BF;
+        top: 0;
+        bottom: 0;
+        left: 7.5rem; /* 日付の幅に合わせて調整 */
         width: 3px;
-        height: 110%;
+        background: #00A5BF;
+        transform: translateX(-50%);
     }
-
-    .border-style {
-        list-style: none;
-    }
-    .border-style:before {
-        content: "";
+    .history-item {
         position: relative;
-        left: -3%;
-        top: 0%;
+        padding-left: 10.5rem; /* 縦線より右側に配置 */
+        margin-bottom: 2rem;
+    }
+    .history-item::before {
+        content: "";
+        position: absolute;
+        left: 7.5rem; /* 縦線の中央に配置 */
+        top: 0.4em; /* テキストの高さに合わせて微調整 */
         width: 10px;
         height: 10px;
-        display: inline-block;
         border-radius: 50%;
         background: #00A5BF;
+        transform: translateX(-50%);
+    }
+    .history-item.no-dot::before {
+        display: none;
+    }
+    .history-date {
+        position: absolute;
+        left: 0;
+        width: 6rem; /* 日付の表示幅 */
+        text-align: right;
     }
 
     /* ----- works ----- */
     .works-title {
-        font-size: 1.6rem;
+        font-size: 1.4rem;
         margin: 5% 0 2% 0;
     }
 
@@ -368,6 +379,35 @@
             transform-origin: right bottom;
             transform: rotate(0);
         }
+    }
+
+    /* ----- links ----- */
+    .link-list {
+        display: flex;
+        justify-content: center;
+        gap: 120px;
+        list-style: none;
+        padding: 0;
+        margin-top: 20px;
+    }
+    .link-item a {
+        display: flex;
+        flex-direction: column; /* アイコンとテキストを縦に並べる */
+        align-items: center; /* 中央揃えにする */
+        gap: 8px; /* アイコンとテキストの間のスペース */
+        transition: transform 0.3s ease; /* ホバー時のアニメーション */
+    }
+    .link-item a:hover {
+        transform: scale(1.1); /* ホバー時に少し拡大する */
+    }
+    .link-icon {
+        width: 100px;
+        height: 100px;
+        object-fit: contain;
+    }
+    .link-text {
+        font-size: 1.2rem;
+        margin: 0;
     }
 
     /* ----- footer ----- */
