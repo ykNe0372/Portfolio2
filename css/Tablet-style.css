@@ -249,8 +249,8 @@
         position: relative;
     }
     .horizontal p {
-        margin: 20px 0 0 20px;
-        padding: 0;
+        margin: 0 auto;
+        padding: 25px;
     }
 
     .history-list {

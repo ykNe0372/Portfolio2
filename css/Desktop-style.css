@@ -337,17 +337,19 @@ article {
 
 .horizontal {
     display: flex;
+    align-items: center;
+    gap: 35px;
 }
 .horizontal img {
-    max-width: 300px;
-    margin-left: auto;
-    padding: 0;
-    overflow: hidden;
-    position: relative;
+    width: 250px;
+    height: auto;
+    object-fit: cover;
+    margin-left: 30px;
 }
 .horizontal p {
-    margin: 20px 0 0 20px;
+    margin-right: 30px;
     padding: 0;
+    flex: 1; /* 文章部分が残りのスペースを埋めるようにする */
 }
 
 .history-list {
