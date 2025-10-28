@@ -240,6 +240,7 @@
 
     .horizontal {
         flex-direction: column;
+        gap: 10px;
     }
     .horizontal img {
         max-width: 250px;
