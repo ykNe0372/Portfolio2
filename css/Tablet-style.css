@@ -73,6 +73,18 @@
         color: #432;
     }
 
+    .footer-nav {
+        display: flex;
+        justify-content: center;
+        gap: 90px;
+        font-size: 1.5rem;
+        margin: 34px 0;
+        list-style: none;
+    }
+    .footer-nav a {
+        color: #432;
+    }
+
     .page-header {
         display: flex;
         justify-content: space-between;
@@ -224,7 +236,6 @@
     .main-content {
         display: flex;
         justify-content: space-between;
-        margin-bottom: 50px;
     }
 
     .horizontal {

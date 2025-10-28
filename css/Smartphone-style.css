@@ -66,12 +66,22 @@
         margin-top: 10px;
         list-style: none;
     }
-
     .main-nav li {
         margin: 0 20px;
     }
-
     .main-nav a {
+        color: #432;
+    }
+
+    .footer-nav {
+        display: flex;
+        justify-content: center;
+        gap: 45px;
+        font-size: 1.5rem;
+        margin: 15px 0;
+        list-style: none;
+    }
+    .footer-nav a {
         color: #432;
     }
 
@@ -246,7 +256,6 @@
     .main-content {
         flex-direction: column;
         justify-content: space-between;
-        margin-bottom: 50px;
     }
 
     .horizontal {

@@ -81,12 +81,22 @@ li {
     margin-top: 34px;
     list-style: none;
 }
-
 .main-nav li {
     margin-left: 72px;
 }
-
 .main-nav a {
+    color: #432;
+}
+
+.footer-nav {
+    display: flex;
+    justify-content: center;
+    gap: 120px;
+    font-size: 1.5rem;
+    margin: 34px 0;
+    list-style: none;
+}
+.footer-nav a {
     color: #432;
 }
 
@@ -319,7 +329,6 @@ article {
 .main-content {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 50px;
 }
 
 .frame {
