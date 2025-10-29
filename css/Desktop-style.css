@@ -473,21 +473,61 @@ article {
 }
 
 /* ----- skills ----- */
-.grid {
+.skills-list {
     display: grid;
-    gap: 50px;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    grid-column: auto;
-    grid-row: auto;
-    margin-top: 2%;
+    gap: 26px;
+    grid-template-columns: repeat(auto-fit, minmax(331px, 1fr));
+    margin-top: 6%;
     margin-bottom: 50px;
 }
-.grid-item img {
-    max-width: 260px;
-    max-height: 260px;
+.skill-item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    background-color: #fffef9;
+}
+.skill-icon {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    flex-shrink: 0; /* 画像が縮まないようにする */
+}
+.skill-details {
+    flex-grow: 1;
+}
+.skill-name {
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin: 0;
+}
+.skill-level {
+    margin: -6% 0 10px;
+}
+.skill-level-percent {
     display: block;
-    margin: 5% auto;
-    animation: rotation 1.2s;
+    text-align: right;
+    font-size: 1rem;
+    color: #555;
+}
+.skill-level-bar-container {
+    width: 100%;
+    height: 10px;
+    background-color: #e0e0e0;
+    border-radius: 5px;
+    overflow: hidden;
+}
+.skill-level-bar {
+    height: 100%;
+    background-color: #00A5BF;
+    border-radius: 5px;
+}
+.skill-description {
+    
+    font-size: 0.9rem;
+    margin: 0;
 }
 
 @keyframes rotation {
