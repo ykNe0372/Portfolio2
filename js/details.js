@@ -4,9 +4,6 @@ let accordionContent = '.js-details-content';
 let speed = 300
 
 $(document).ready(function() {
-  // 初期状態で「－」を表示するために、すべてのaccordionSummaryにis-activeクラスを付与
-  $(accordionSummary).addClass("is-active");
-
   // 初期状態でアコーディオンを閉じた状態にする
   $(accordionDetails).attr("close", "true");
 });
