@@ -488,6 +488,7 @@ article {
     border: 2px solid #ddd;
     border-radius: 10px;
     background-color: #fffef9;
+    box-shadow: rgba(0, 0, 0, 0.15) 3px 5px 5px;
 }
 .skill-icon {
     width: 80px;
@@ -525,22 +526,18 @@ article {
     border-radius: 5px;
 }
 .skill-description {
-    
     font-size: 0.9rem;
     margin: 0;
 }
 
-@keyframes rotation {
-    0% {
-        opacity: 0;
-        transform-origin: right bottom;
-        transform: rotate(-60deg);
-    }
-    100% {
-        opacity: 1;
-        transform-origin: right bottom;
-        transform: rotate(0);
-    }
+.fadeIn_up {
+    opacity: 0;
+    transform: translate(0, 50%);
+    transition: 2s;
+}
+.fadeIn_up.is-show {
+    transform: translate(0, 0);
+    opacity: 1;
 }
 
 /* ----- links ----- */
