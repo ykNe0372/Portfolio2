@@ -457,6 +457,7 @@
         border-radius: 10px;
         background-color: #fffef9;
         box-sizing: border-box;
+        box-shadow: rgba(0, 0, 0, 0.15) 2px 4px 5px;
     }
     .skill-icon {
         width: 45px;

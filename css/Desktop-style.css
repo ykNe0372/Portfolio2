@@ -488,6 +488,7 @@ article {
     border: 2px solid #ddd;
     border-radius: 10px;
     background-color: #fffef9;
+    box-shadow: rgba(0, 0, 0, 0.15) 3px 5px 5px;
 }
 .skill-icon {
     width: 80px;
