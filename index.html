@@ -15,17 +15,22 @@
 
   <!-- CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+  <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+  <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
+
   <link rel="stylesheet" href="css/Desktop-style.css" />
   <link rel="stylesheet" href="css/Tablet-style.css" />
   <link rel="stylesheet" href="css/Smartphone-style.css" />
 
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="img/favicon.png" />
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js" defer></script>
 </head>
 
 <body>
   <div class="c-loader-bg js-loader-bg">
-    <div class="c-optext js-loader-Optext">
+    <div id="c-optext" class="c-optext js-loader-Optext">
       <span>y</span>
       <span>k</span>
       <span>N</span>
@@ -155,449 +160,124 @@
       <header class="chapter-title" id="works">Works</header>
       <div class="main-content wrapper">
         <article>
-          <details class="details js-details">
-            <summary class="details-summary js-details-summary">
-              <h3 class="works-title" id="discord-bot">
-                <span class="btn"></span>
-                <div class="works-title-position">
-                  <div>
-                    <i class="fa-brands fa-discord"></i> ひまつぶしbotくん
-                  </div>
-                  <div class="tool-position">Python <i class="fa-brands fa-python tool"></i></div>
-                </div>
-              </h3>
-            </summary>
-            <div class="container details-content js-details-content">
-              <img src="img/samples/bot_prof.png" />
+          <div class="works-grid">
+          <!-- ひまつぶしbotくん -->
+          <div class="work-card" data-modal-target="discord-bot">
+            <img src="img/samples/bot_prof.png" alt="ひまつぶしbotくん" class="work-card-img">
+            <div class="work-card-body">
+              <h3 class="work-card-title">ひまつぶしbotくん</h3>
+              <p class="work-card-description">Discord で暇つぶしができる多機能 Bot。</p>
+              <div class="work-card-tools">
+                <span class="work-card-tool-item">Python <i class="fa-brands fa-python"></i></span>
+              </div>
             </div>
-            <p>
-              　Pythonを使用して、Discord で暇つぶしが出来る bot を作成しました。
-              現在、ルーレットやブラックジャックによるギャンブル、人狼ゲームが実装されています！<br />
-              　便利機能として、チップを管理できるバンク機能、デイリー報酬機能、他人にチップを渡す／他人からチップを奪う機能などが実装されています。
-            </p>
-            <div class="container details-content js-details-content">
-              <img src="img/samples/bot_commands.png" />
+          </div>
+          <!-- 特殊ルールマインスイーパー -->
+          <div class="work-card" data-modal-target="minesweeper">
+            <img src="img/samples/CUI_minesweeper.png" alt="特殊ルールマインスイーパー" class="work-card-img">
+            <div class="work-card-body">
+              <h3 class="work-card-title">特殊ルールマインスイーパー</h3>
+              <p class="work-card-description">CUI で遊べる特殊ルールマインスイーパー。</p>
+              <div class="work-card-tools">
+                <span class="work-card-tool-item">C++</span>
+              </div>
             </div>
-            <p>
-              　こだわりポイントとして、各人がバラバラに実行すると自分の手札がどれか分からなくなるという意見があったため、
-              ブラックジャックに複数人同時に遊ぶモードを実装しました。
-              管理するべき要素が非常に多く、とても実装が難しかったです...！
-            </p>
-            <div class="container details-content js-details-content">
-              <video src="video/multi_bj.mp4" controls muted></video>
+          </div>
+          <!-- Ice Hopper -->
+          <div class="work-card" data-modal-target="ice-hopper">
+            <img src="img/samples/U1GM-2_1.png" alt="Ice Hopper" class="work-card-img">
+            <div class="work-card-body">
+              <h3 class="work-card-title">Ice Hopper</h3>
+              <p class="work-card-description">Unity 1Week Game Jam 参加作品。</p>
+              <div class="work-card-tools">
+                <span class="work-card-tool-item">Unity <i class="fa-brands fa-unity"></i></span>
+              </div>
             </div>
-            <p>
-              　また、bot の更新時にチップが無くなってしまうという不具合が発生してしまったのですが、
-              Dropbox にチップを保存するシステムを実装することで解決しました。
-              TOKEN の取得が難しくかなり苦戦しましたが、生成AIを活用して実装することが出来ました！<br />
-              　1サーバーでしか使用することを想定していないので現状は問題ありませんが、
-              インターネット上に公開して様々なサーバーでも動作させるには、保存処理を改善する必要がありそうです。
-            </p>
-            <div class="container details-content js-details-content">
-              <video src="video/blackjack.mp4" controls muted></video>
+          </div>
+          <!-- 音をつたえるあかりちゃん -->
+          <div class="work-card" data-modal-target="akari-puzzle">
+            <img src="img/samples/Akari_puzzle2.png" alt="音をつたえるあかりちゃん" class="work-card-img">
+            <div class="work-card-body">
+              <h3 class="work-card-title">音をつたえるあかりちゃん</h3>
+              <p class="work-card-description">音符を運んでギミックを動かす倉庫番。</p>
+              <div class="work-card-tools">
+                <span class="work-card-tool-item">Python <i class="fa-brands fa-python"></i></span>
+              </div>
             </div>
-
-            <p>
-              <i class="fa-regular fa-clock"></i> 制作期間:
-              1ヶ月（5月上旬～5月末）<br />
-              <i class="fa-solid fa-wrench"></i> 開発:
-              Python、Discord.py、Dropbox、Github Copilot、chatGPT<br />
-            </p>
-          </details>
-
-          <details class="details js-details">
-            <summary class="details-summary js-details-summary">
-              <h3 class="works-title">
-                <span class="btn"></span>
-                <div class="works-title-position">
-                  <div>
-                    <i class="fa-solid fa-flag"></i> 特殊ルールマインスイーパー
-                  </div>
-                  <div class="tool-position">C++</div>
-                </div>
-              </h3>
-            </summary>
-            <div class="container details-content js-details-content">
-              <img src="img/samples/CUI_minesweeper.png" />
+          </div>
+          <!-- TodoApp -->
+          <div class="work-card" data-modal-target="todo-app">
+            <img src="img/samples/Todo_1.png" alt="TodoApp" class="work-card-img">
+            <div class="work-card-body">
+              <h3 class="work-card-title">TodoApp</h3>
+              <p class="work-card-description">Reactで作成したシンプルな Todo アプリ。</p>
+              <div class="work-card-tools">
+                <span class="work-card-tool-item">React <i class="fa-brands fa-react"></i></span>
+              </div>
             </div>
-            <p>
-              　C++のみを用いて、マインスイーパーを作成しました。
-              プールアロケーターを用いて、メモリの確保を行っており、動作の高速化を図っています。<br />
-              　14 Minesweeper Variants という特殊ルール付きのマインスイーパーが好きなので、二つルールを再現してみました。
-              本家様のように特殊ルールを巧みに使った手筋などはありませんが、ルールが作れただけでも良かったです。
-            </p>
-            <div class="container details-content js-details-content">
-              <img src="img/samples/CUI_ruleChoice.png" />
+          </div>
+          <!-- 殲滅サバイブ -->
+          <div class="work-card" data-modal-target="survive">
+            <img src="img/samples/Survive.png" alt="殲滅サバイブ" class="work-card-img">
+            <div class="work-card-body">
+              <h3 class="work-card-title">殲滅サバイブ</h3>
+              <p class="work-card-description">2023年度高専祭で展示したサバイバルゲーム。</p>
+              <div class="work-card-tools">
+                <span class="work-card-tool-item">Unity <i class="fa-brands fa-unity"></i></span>
+              </div>
             </div>
-            <p>
-              　工夫点として、理不尽なゲームオーバーを避けるために、最初は確定でマスが開けられるように設定しています。
-              また、数字や旗に色を付けることで、ターミナル上での見やすさにこだわりました。<br />
-              　操作感を向上させるため、キーボードで操作できるようになっています。
-              他にも、再描画の際にターミナルがチラつかないような工夫もしています。
-              <br /><br />
-              ゲームエンジンを使わずに制作する本格的なゲームはこれが初めてだったので、良い経験になりました！
-            </p>
-            <div class="container details-content js-details-content">
-              <video src="video/minesweeper.mp4" controls muted></video>
+          </div>
+          <!-- お金がないなら集めればいい -->
+          <div class="work-card" data-modal-target="collect-money">
+            <img src="img/samples/U1GM-1_3.png" alt="お金がないなら集めればいい" class="work-card-img">
+            <div class="work-card-body">
+              <h3 class="work-card-title">お金がないなら集めればいい</h3>
+              <p class="work-card-description">Unity 1Week Game Jam 初参加作品。</p>
+              <div class="work-card-tools">
+                <span class="work-card-tool-item">Unity <i class="fa-brands fa-unity"></i></span>
+              </div>
             </div>
-
-            <p>
-              <i class="fa-regular fa-clock"></i> 制作期間:
-              3日（2025年8月下旬）<br />
-              <i class="fa-solid fa-wrench"></i> 開発:
-              C++<br />
-              制作したゲームのコード/プレイは
-              <strong>
-                <a href="https://github.com/ykNe0372/CUI_minesweeper" target="_blank" rel="noreferrer noopener"
-                  class="underline_anim">
-                  こちらから
-                </a>
-              </strong>
-            </p>
-          </details>
-
-          <details class="details js-details">
-            <summary class="details-summary js-details-summary">
-              <h3 class="works-title">
-                <span class="btn"></span>
-                <div class="works-title-position">
-                  <div>
-                    <i class="fa-solid fa-ice-cream"></i> Ice Hopper
-                  </div>
-                  <div class="tool-position">Unity <i class="fa-brands fa-unity"></i></div>
-                </div>
-              </h3>
-            </summary>
-            <div class="container details-content js-details-content">
-              <img src="img/samples/U1GM-2_1.png" />
+          </div>
+          <!-- ブログアプリ -->
+          <div class="work-card" data-modal-target="blog-app">
+            <img src="img/samples/blog_1.png" alt="ブログアプリ" class="work-card-img">
+            <div class="work-card-body">
+              <h3 class="work-card-title">ブログアプリ</h3>
+              <p class="work-card-description">Next.js と Supabase で作成したブログアプリ。</p>
+              <div class="work-card-tools">
+                <span class="work-card-tool-item">React <i class="fa-brands fa-react"></i></span>
+              </div>
             </div>
-            <p>
-              　2025年4月に開催された、Unity 1-Week GAME
-              JAM（お題「あい」）の参加作品です。<br /><br />
-              　アイスクリームの足場を乗り継いでゴールを目指す、１画面アクションゲームです。
-              アイスの足場は時間経過で溶けて消えてしまうため、焦らずに対処することが攻略の鍵となっています！<br />
-              　今回も友人と参加しました！ゆきねこ｡は主にプレイヤー関連の処理、床の処理、チュートリアル以外のステージ制作を担当です。
-            </p>
-            <div class="container details-content js-details-content">
-              <video src="video/IceHopper1.mp4" controls muted></video>
+          </div>
+          <!-- シューティングゲーム -->
+          <div class="work-card" data-modal-target="shooting">
+            <img src="img/samples/controller.jpg" alt="シューティングゲーム" class="work-card-img">
+            <div class="work-card-body">
+              <h3 class="work-card-title">シューティングゲーム</h3>
+              <p class="work-card-description">2024年度高専祭で展示した Joy-Con で操作するシューティング。</p>
+              <div class="work-card-tools">
+                <span class="work-card-tool-item">Unity <i class="fa-brands fa-unity"></i></span>
+              </div>
             </div>
-            <p>
-              <i class="fa-regular fa-clock"></i> 制作期間:
-              1週間（2025年4月14日0時～2025年4月21日0時）<br />
-              <i class="fa-solid fa-wrench"></i> 開発: Unity<br />
-              制作したゲームのプレイは
-              <strong>
-                <a href="https://unityroom.com/games/icehopper" target="_blank" rel="noreferrer noopener"
-                  class="underline_anim">
-                  こちらから
-                </a>
-              </strong>
-            </p>
-          </details>
-
-          <details class="details js-details">
-            <summary class="details-summary js-details-summary">
-              <h3 class="works-title">
-                <span class="btn"></span>
-                <div class="works-title-position">
-                  <div>
-                    <i class="fa-solid fa-music"></i> 音をつたえるあかりちゃん
-                  </div>
-                  <div class="tool-position">Python <i class="fa-brands fa-python"></i></div>
-                </div>
-              </h3>
-            </summary>
-            <p>
-              　音符をスイッチまで運び、ギミックを動かしてゴールへ向かう見下ろし型視点の2Dパズルゲーム！
-              ステージはチュートリアルステージを除き、現在は５ステージのみとなっています。<br />
-              　前半ステージは遊びやすい難易度になっていますが、ステージを進むごとに難易度が上昇していきます！
-            </p>
-            <div class="container details-content js-details-content">
-              <img src="img/samples/Akari_puzzle2.png" />
+          </div>
+          <!-- じゃんけんシミュレーター -->
+          <div class="work-card" data-modal-target="rps">
+            <img src="img/samples/RPS.png" alt="じゃんけんシミュレーター" class="work-card-img">
+            <div class="work-card-body">
+              <h3 class="work-card-title">じゃんけんシミュレーター</h3>
+              <p class="work-card-description">Google Colab.で作成した CUI じゃんけんゲーム。</p>
+              <div class="work-card-tools">
+                <span class="work-card-tool-item">Python <i class="fa-brands fa-python"></i></span>
+              </div>
             </div>
-            <p>
-              　1つのステージを設計するために必要な時間は、テストプレイも含めても1時間ほどで済むのですが、
-              最終ステージ（上の画像）の設計には4時間ほどかかりました...<br />
-              　難しさを確保しつつ、パズルゲームの面白さを損なわない設計が、いかに難しいかを身をもって思い知らされました。<br />
-              しかし、ステージの設計は非常に新鮮で、とても面白かったです！<br /><br />
-            </p>
-            <div class="container details-content js-details-content">
-              <video src="video/Akari_puzzle1.mp4" controls muted></video>
-            </div>
-            <p>
-              <i class="fa-regular fa-clock"></i> 制作期間:
-              約2週間（2023年12月下旬～2024年1月上旬）<br />
-              <i class="fa-solid fa-wrench"></i> 開発: pygame<br />
-              音をつたえるあかりちゃんのプレイ/コードは
-              <strong>
-                <a href="https://github.com/ykNe0372/oto-puzzle-game" target="_blank" rel="noreferrer noopener"
-                  class="underline_anim">
-                  こちらから
-                </a>
-              </strong>
-            </p>
-          </details>
-
-          <details class="details js-details">
-            <summary class="details-summary js-details-summary">
-              <h3 class="works-title">
-                <span class="btn"></span>
-                <div class="works-title-position">
-                  <div>
-                    <i class="fa-solid fa-list-check"></i> TodoApp
-                  </div>
-                  <div class="tool-position">React <i class="fa-brands fa-react"></i></div>
-                </div>
-              </h3>
-            </summary>
-            <div class="container details-content js-details-content">
-              <img src="img/samples/Todo_1.png" />
-            </div>
-            <p>
-              　React、TypeScript、Tailwind CSSを用いて、TodoAppを作成しました。
-              タスクの追加/編集/削除に加え、ローカルストレージでデータを永続化しています。<br />
-              モーダルウィンドウを用いることで簡潔なデザインにまとめ、分かりやすいデザインになるように心掛けました。<br />
-            <div class="container details-content js-details-content">
-              <img src="img/samples/Todo_2.png" />
-            </div>
-            　また、ユーザーが自由にメモできるような備考欄も実装しました。<br />
-            記入は任意ですが、タスクの内容を詳しく記入することで、タスクの内容を忘れにくくなると思います。<br />
-            <div class="container details-content js-details-content">
-              <img src="img/samples/Todo_3.png" />
-            </div>
-            　今回開発に用いたReact、TypeScriptは初めて使用したので非常に苦しかったですが、形になって良かったです！<br />
-            時間がかかった要素は、編集機能の実装です。想定していたよりも遥かに難しくて大変でした...<br /><br />
-
-            <i class="fa-regular fa-clock"></i> 制作期間:
-            約1ヶ月（2024年10月末～2024年11月末）<br />
-            <i class="fa-solid fa-wrench"></i> 開発: React、TypeScript<br />
-            TodoAppの使用は
-            <strong>
-              <a href="https://ykne0372.github.io/react-todo-app/" target="_blank" rel="noreferrer noopener"
-                class="underline_anim">
-                こちらから
-              </a> </strong>、コードは
-            <strong>
-              <a href="https://github.com/ykNe0372/react-todo-app" target="_blank" rel="noreferrer noopener"
-                class="underline_anim">
-                こちらから
-              </a>
-            </strong>
-            </p>
-          </details>
-
-          <details class="details js-details">
-            <summary class="details-summary js-details-summary">
-              <h3 class="works-title">
-                <span class="btn"></span>
-                <div class="works-title-position">
-                  <div>
-                    <i class="fa-solid fa-heart-circle-exclamation"></i> 殲滅サバイブ
-                  </div>
-                  <div class="tool-position">Unity <i class="fa-brands fa-unity"></i></div>
-                </div>
-              </h3>
-            </summary>
-            <div class="container details-content js-details-content">
-              <img src="img/samples/Survive.png" />
-            </div>
-            <p>
-              　敵を倒し、戦い抜け───<br />
-              高専祭用に、チームで殲滅サバイブというゲームを制作しました！<br />
-              敵を倒して5分間生き残る、シンプルなルールのサバイバルゲームです。<br />
-              敵を倒すとプレイヤーの武器とステータスが上昇するアイテムがドロップすることがあります。
-              アイテムを拾って自分を強化し、敵の猛攻から生き残れ！<br /><br />
-              ゆきねこ｡は、ステージ作成、UIデザイン、難易度などのゲームバランスの微調整やデバックなどを担当しました。<br /><br />
-            </p>
-            <div class="container details-content js-details-content">
-              <video src="video/survive.mp4" controls muted></video>
-            </div>
-            <p>
-              <i class="fa-regular fa-clock"></i> 計画: 約2週間　制作:
-              約1ヶ月半　不具合修正等: 数時間　合計: 約2ヶ月<br />
-              <i class="fa-solid fa-wrench"></i> 開発: Unity<br />
-              殲滅サバイブのプレイは
-              <strong>
-                <a href="https://unityroom.com/games/sennmetsu_survive" target="_blank" rel="noreferrer noopener"
-                  class="underline_anim">
-                  こちらから
-                </a>
-              </strong>
-            </p>
-          </details>
-
-          <details class="details js-details">
-            <summary class="details-summary js-details-summary">
-              <h3 class="works-title">
-                <span class="btn"></span>
-                <div class="works-title-position">
-                  <div>
-                    <i class="fa-solid fa-blog"></i> ブログアプリ
-                  </div>
-                  <div class="tool-position">React <i class="fa-brands fa-react"></i></div>
-                </div>
-              </h3>
-            </summary>
-            <div class="container details-content js-details-content">
-              <img src="img/samples/blog_1.png" />
-            </div>
-            <p>
-              　本アプリは TypeScript、Next.js、prisma を用いたブログアプリです。
-              記事の新規作成/編集/削除の基本的な機能を実装し、シンプルなデザインのアプリに仕上げました。<br />
-              　また、ログイン機能を実装し、ログインしたユーザーのみが記事の作成等を行えるようになっています。
-              悪用等防止のため、ログインに必要な情報の公開は行いません。あらかじめご了承くださいますようお願い申し上げます<br /><br />
-            </p>
-
-            <div class="container details-content js-details-content">
-              <img src="img/samples/blog_3.png" />
-            </div>
-            <p>
-              また、検索機能と並びかえの機能を実装し、記事の数が増えた場合でも、ユーザーが記事を探しやすくなるようにしました。
-              <br /><br />
-              <i class="fa-regular fa-clock"></i> 制作期間:
-              約3ヶ月（2024年11月中旬～2025年2月下旬）<br />
-              <i class="fa-solid fa-wrench"></i> 開発:
-              TypeScript、Next.js、prisma、Supabase、Vercel<br />
-              ブログアプリは
-              <strong>
-                <a href="https://next-blog-app-pied-nine.vercel.app/" target="_blank" rel="noreferrer noopener"
-                  class="underline_anim">
-                  こちらから
-                </a> </strong>、コードは
-              <strong>
-                <a href="https://github.com/ykNe0372/next-blog-app" target="_blank" rel="noreferrer noopener"
-                  class="underline_anim">
-                  こちらから
-                </a>
-              </strong>
-            </p>
-          </details>
-
-          <details class="details js-details">
-            <summary class="details-summary js-details-summary">
-              <h3 class="works-title">
-                <span class="btn"></span>
-                <div class="works-title-position">
-                  <div>
-                    <i class="fa-solid fa-wallet"></i> お金がないなら集めればいい
-                  </div>
-                  <div class="tool-position">Unity <i class="fa-brands fa-unity"></i></div>
-                </div>
-              </h3>
-            </summary>
-            <div class="container details-content js-details-content">
-              <img src="img/samples/U1GM-1_3.png" />
-            </div>
-            <p>
-              　2024年年末に開催された、Unity 1-Week GAME
-              JAM（お題「ない」）の参加作品です。<br /><br />
-              　タイトルの通り、お金がないので集めるゲームです。集める場所は自販機下！
-              お金とゴミが左右から流れてくるので、お金をクリックしてお金を集めましょう！
-              ゴミをクリックしてしまうと、集めたお金が減ってしまいます...<br />
-              1分間で2,000円を貯めて、財布を爆発させることが出来ればクリアです！
-            </p>
-            <div class="container details-content js-details-content">
-              <img src="img/samples/U1GM-1_2.png" />
-            </div>
-            <p>
-              　友人と2人で参加しました！ゆきねこ｡は主にコーディングを担当です。
-              初参加ということもあってかなり緊張しましたが、何とか期間内に形になって良かったです。<br />
-              　毎日12時間以上制作に費やすというかなりのハードワークではありましたが、楽しく開発できました！
-              今回のGAME JAMに参加したことで、ゲームの制作意欲も刺激されたので、
-              この勢いで沢山ゲームを作っていこうと思います！
-            </p>
-            <div class="container details-content js-details-content">
-              <video src="video/u1-1_1.mp4" controls muted></video>
-            </div>
-            <p>
-              <i class="fa-regular fa-clock"></i> 制作期間:
-              1週間（2024年12月23日0時～2024年12月29日20時）<br />
-              <i class="fa-solid fa-wrench"></i> 開発: Unity<br />
-              制作したゲームのプレイは
-              <strong>
-                <a href="https://unityroom.com/games/non-money-saihubakuhatu" target="_blank" rel="noreferrer noopener"
-                  class="underline_anim">
-                  こちらから
-                </a>
-              </strong>
-            </p>
-          </details>
-
-          <details class="details js-details">
-            <summary class="details-summary js-details-summary">
-              <h3 class="works-title">
-                <span class="btn"></span>
-                <div class="works-title-position">
-                  <div>
-                    <i class="fa-solid fa-person-rifle"></i> シューティングゲーム
-                  </div>
-                  <div class="tool-position">Unity <i class="fa-brands fa-unity"></i></div>
-                </div>
-              </h3>
-            </summary>
-            <p>
-              　高専祭用に、チームでシューティングゲームを制作しました！<br />
-              コントローラーはJoyconを使用して、班員に銃型のものを作成してもらいました！
-              ジャイロセンサーを活用して照準を操作する形になっています。<br />
-              リロード機能なども実装されていて、段ボール製とは思えないほどの品質です！（すごい）
-            </p>
-            <div class="container details-content js-details-content">
-              <img src="img/samples/controller.jpg" />
-            </div>
-            <p>
-              　ゆきねこ｡は、敵キャラのデザイン、作画を担当しました。
-              基本的には、デザイン班として活動しましたが、少しだけプログラム班の相談にのりました。
-            </p>
-            <div class="container details-content js-details-content">
-              <img src="img/samples/blank.jpg" />
-            </div>
-            <p>
-              　この子は、また別の班員に動かしてもらいました。また、別で武器も作成してもらいました。
-              実際に動いている所を見ると、とっても嬉しいです！それに楽しい！<br /><br />
-              <i class="fa-regular fa-clock"></i> 制作期間:
-              約1ヶ月（2024年10月上旬～2024年11月上旬）<br />
-              <i class="fa-solid fa-wrench"></i> 開発: Unity<br />
-            </p>
-          </details>
-
-          <details class="details js-details">
-            <summary class="details-summary js-details-summary">
-              <h3 class="works-title">
-                <span class="btn"></span>
-                <div class="works-title-position">
-                  <div>
-                    <i class="fa-regular fa-hand-scissors"></i> じゃんけんシミュレーター
-                  </div>
-                  <div class="tool-position">python <i class="fa-brands fa-python"></i></div>
-                </div>
-              </h3>
-            </summary>
-            <div class="container details-content js-details-content">
-              <img src="img/samples/RPS.png" />
-            </div>
-            <p>
-              　Google Colab.を使用し、じゃんけんのシミュレーターを作成しました！<br />
-              じゃんけんシミュレーターと言いつつ、時間が余ったのであっち向いてホイも実装しました。<br /><br />
-
-              <i class="fa-regular fa-clock"></i> 制作: 約8時間　不具合修正:
-              約2時間　合計: 約10時間<br />
-              <i class="fa-solid fa-wrench"></i> 開発: Google Colab.<br />
-              じゃんけんシミュレーターのプレイは
-              <strong>
-                <a href="https://github.com/ykNe0372/Rock-Paper-Scissors" target="_blank" rel="noreferrer noopener"
-                  class="underline_anim">
-                  こちらから
-                </a>
-              </strong>
-            </p>
-          </details>
+          </div>
         </article>
       </div>
 
       <header class="chapter-title" id="skills">Skills</header>
 
       <div class="skills-list">
-        <div class="skill-item">
+        <div class="skill-item inview_re fadeIn_up">
           <img src="img/icons/cpp_logo.png" alt="C++" class="skill-icon">
           <div class="skill-details">
             <h4 class="skill-name">C++</h4>
@@ -605,7 +285,7 @@
             <p class="skill-description">部活動・授業で使用しています。人生で初めて触った言語で使用歴は最も長いですが、まだまだ勉強中です。</p>
           </div>
         </div>
-        <div class="skill-item">
+        <div class="skill-item inview_re fadeIn_up">
           <img src="img/icons/python_logo.png" alt="Python" class="skill-icon">
           <div class="skill-details">
             <h4 class="skill-name">Python</h4>
@@ -614,7 +294,7 @@
               かなり使用頻度が高い言語で、徐々に読めるようになってきました。</p>
           </div>
         </div>
-        <div class="skill-item">
+        <div class="skill-item inview_re fadeIn_up">
           <img src="img/icons/HTML5_Logo.png" alt="HTML" class="skill-icon">
           <div class="skill-details">
             <h4 class="skill-name">HTML</h4>
@@ -622,7 +302,7 @@
             <p class="skill-description">このサイトが作れる程度です。頑張ってもっとデザインを凝ったサイトを作成してみたいと思っています。</p>
           </div>
         </div>
-        <div class="skill-item">
+        <div class="skill-item inview_re fadeIn_up">
           <img src="img/icons/CSS3_logo.png" alt="CSS" class="skill-icon">
           <div class="skill-details">
             <h4 class="skill-name">CSS</h4>
@@ -630,7 +310,7 @@
             <p class="skill-description">このサイトが作れる程度です。CSSアニメーションに興味があり、習得したいと考えています。</p>
           </div>
         </div>
-        <div class="skill-item">
+        <div class="skill-item inview_re fadeIn_up">
           <img src="img/icons/JS_logo.png" alt="JavaScript" class="skill-icon">
           <div class="skill-details">
             <h4 class="skill-name">JavaScript</h4>
@@ -639,7 +319,7 @@
               あまり慣れておらず、実装には時間がかかります。</p>
           </div>
         </div>
-        <div class="skill-item">
+        <div class="skill-item inview_re fadeIn_up">
           <img src="img/icons/React-logo.svg" alt="React" class="skill-icon">
           <div class="skill-details">
             <h4 class="skill-name">React</h4>
@@ -648,7 +328,7 @@
             </p>
           </div>
         </div>
-        <div class="skill-item">
+        <div class="skill-item inview_re fadeIn_up">
           <img src="img/icons/unity_logo.png" alt="Unity" class="skill-icon">
           <div class="skill-details">
             <h4 class="skill-name">Unity</h4>
@@ -676,6 +356,14 @@
           </li>
         </ul>
     </article>
+  </div>
+
+  <!-- Modal -->
+  <div class="modal">
+    <div class="modal-overlay"></div>
+    <div class="modal-container">
+      <!-- works コンテンツ表示場所 -->
+    </div>
   </div>
 
   <footer>
@@ -706,16 +394,18 @@
   </footer>
 
   <!-- JavaScript-->
-  <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-  <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
   <script type="text/javascript" src="js/jquery-3.7.1.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 
   <script type="text/javascript" src="slick/slick.min.js"></script>
-  <script type="text/javascript" src="js/details.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inview/1.0.0/jquery.inview.min.js"></script>
+
   <script type="text/javascript" src="js/loading.js"></script>
   <script type="text/javascript" src="js/opening.js"></script>
   <script type="text/javascript" src="js/smooth-scroll.js"></script>
+  <script type="text/javascript" src="js/fadein.js"></script>
+  <script type="text/javascript" src="js/modal.js"></script>
 </body>
 
 </html>

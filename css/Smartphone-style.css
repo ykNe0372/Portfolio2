@@ -457,6 +457,7 @@
         border-radius: 10px;
         background-color: #fffef9;
         box-sizing: border-box;
+        box-shadow: rgba(0, 0, 0, 0.15) 2px 4px 5px;
     }
     .skill-icon {
         width: 45px;
@@ -497,18 +498,14 @@
         font-size: 1rem;
     }
 
-    @keyframes rotation {
-        0% {
-            opacity: 0;
-            transform-origin: right bottom;
-            transform: rotate(-60deg);
-        }
-
-        100% {
-            opacity: 1;
-            transform-origin: right bottom;
-            transform: rotate(0);
-        }
+    .fadeIn_up {
+        opacity: 0;
+        transform: translate(0, 50%);
+        transition: 2s;
+    }
+    .fadeIn_up.is-show {
+        transform: translate(0, 0);
+        opacity: 1;
     }
 
     /* ----- links ----- */
@@ -576,5 +573,37 @@
         border-top: 3px solid #000;
         border-right: 3px solid #000;
         transform: translateY(20%) rotate(-45deg);
+    }
+
+    /* ----- Modal ----- */
+    .modal-container {
+        padding: 1.5rem;
+        max-height: 95vh;
+    }
+
+    /* ----- Modal Slider (Slick) ----- */
+    .modal-slider .slick-slide {
+        height: 240px;
+    }
+
+    .modal-slider .slick-slide img,
+    .modal-slider .slick-slide video {
+        max-height: 240px;
+    }
+
+    /* Slickの矢印を内側に配置 */
+    .slick-prev {
+        left: 10px;
+        z-index: 1;
+    }
+
+    .slick-next {
+        right: 10px;
+        z-index: 1
+    }
+
+    .modal-meta {
+        font-size: 0.8rem;
+        gap: 0.5rem 1rem;
     }
 }

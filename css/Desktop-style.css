@@ -397,79 +397,184 @@ article {
 /* ----- works ----- */
 .works-title {
     font-size: 1.6rem;
-    margin: 5% 0 2% 0;
+    margin-bottom: 2%;
     padding-bottom: 1.5%;
     border-bottom: 4px dotted #3da;
 }
-.works-title-position {
-    display: flex;
-    width: 90%;
-    justify-content: space-between;
-}
-.tool-position {
-    margin: auto 0;
+
+.works-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
 }
 
-.container {
-    display: flex;
-}
-.container img {
-    max-width: 75%;
-    margin: 3% auto;
-    display: flex;
-}
-.container video {
-    max-width: 75%;
-    margin: 3% auto;
-    display: flex;
+.work-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
 }
 
-.details-summary {
+.work-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.work-card-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+}
+
+.work-card-body {
+    padding: 1rem 1.2rem;
+}
+
+.work-card-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin: 0 0 0.5rem;
+}
+
+.work-card-description {
+    font-size: 0.9rem;
+    color: #666;
+    margin: 0;
+}
+
+.work-card-tools {
+    margin-top: 1rem;
+    font-size: 0.8rem;
+}
+
+.work-card-tool-item {
+    display: inline-block;
+    background-color: #f0f4f8;
+    color: #555;
+    padding: 0.3rem 0.6rem;
+    border-radius: 5px;
+    margin-right: 0.5rem;
+}
+
+/* ----- Modal ----- */
+.modal {
+    display: flex; /* flexは維持しつつ、透明度と表示状態で制御 */
+    opacity: 0;
+    visibility: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.4s ease, visibility 0.4s ease;
+}
+
+.modal.is-active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    cursor: pointer;
+}
+
+.modal-container {
     position: relative;
-	display: block;
-	.btn {
-		position: absolute;
-		top: 25%;
-		right: 5%;
-		width: 18px;
-		height: 18px;
-		transform-origin: center center;
-		transition-duration: 0.2s;
-
-		&:after {
-			content: "";
-			background-color: #3da;
-			border-radius: 10px;
-			width: 18px;
-			height: 4px;
-			position: absolute;
-			top: 7px;
-			left: 0;
-			transform-origin: center center;
-		}
-		&:before {
-            content: "";
-            background-color: #3da;
-            border-radius: 10px;
-			width: 4px;
-			height: 18px;
-            position: absolute;
-			top: 0;
-			left: 7px;
-		}
-	}
-	&.is-active {
-		.btn {
-			-webkit-transform: rotate(-180deg);
-			transform: rotate(-180deg);
-			&:before {
-				content: none;
-			}
-		}
-	}
+    background-color: #fffef9;
+    width: 90%;
+    max-width: 800px;
+    max-height: 90vh;
+    overflow-y: auto;
+    border-radius: 10px;
+    padding: 2rem;
+    z-index: 1;
+    transform: scale(0.95);
+    transition: transform 0.4s ease;
 }
-.details-summary::-webkit-details-marker {
-	display: none;
+
+.modal.is-active .modal-container {
+    transform: scale(1); /* モーダル表示時にコンテナを少し拡大 */
+}
+
+.modal-close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 30px;
+    height: 30px;
+    color: #432;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2rem;
+    line-height: 30px;
+    text-align: center;
+    transition: background-color 0.2s;
+}
+
+.modal-meta {
+    display: flex;
+    flex-wrap: wrap; /* 画面幅が狭い場合に折り返す */
+    gap: 0.5rem 1.5rem;
+    margin-top: 1.5rem;
+    padding-top: 1rem;
+    border-top: 1px solid #eee;
+    font-size: 0.9rem;
+}
+
+.modal-meta-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* ----- Modal Slider (Slick) ----- */
+.modal-slider {
+    margin-bottom: 1.5rem;
+}
+
+.modal-slider .slick-slide {
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    height: 380px; /* スライドの高さを固定 */
+}
+
+.modal-slider .slick-slide img,
+.modal-slider .slick-slide video {
+    max-height: 380px; /* スライダーの高さを制限 */
+    width: auto;
+    max-width: 100%;
+    object-fit: contain;
+    margin: 0 auto;
+}
+
+/* Slickの矢印の色を調整 */
+.slick-prev:before,
+.slick-next:before {
+    font-family: sans-serif;
+    color: #432;
+    font-size: 24px;
+    line-height: 1;
+    font-weight: bold;
+}
+.slick-prev:before {
+    content: '<';
+}
+.slick-next:before {
+    content: '>';
 }
 
 /* ----- skills ----- */
