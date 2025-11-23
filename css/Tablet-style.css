@@ -377,6 +377,7 @@
         border: 2px solid #ddd;
         border-radius: 10px;
         background-color: #fffef9;
+        box-shadow: rgba(0, 0, 0, 0.15) 3px 5px 5px;
     }
     .skill-icon {
         width: 70px;
@@ -417,6 +418,16 @@
     .skill-description {
         flex-direction: column;
         font-size: 1rem;
+    }
+
+    .fadeIn_up {
+        opacity: 0;
+        transform: translate(0, 50%);
+        transition: 2s;
+    }
+    .fadeIn_up.is-show {
+        transform: translate(0, 0);
+        opacity: 1;
     }
 
     /* ----- links ----- */
