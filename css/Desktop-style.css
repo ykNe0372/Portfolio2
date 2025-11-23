@@ -397,7 +397,7 @@ article {
 /* ----- works ----- */
 .works-title {
     font-size: 1.6rem;
-    margin: 2% 0;
+    margin-bottom: 2%;
     padding-bottom: 1.5%;
     border-bottom: 4px dotted #3da;
 }
@@ -524,10 +524,6 @@ article {
     transition: background-color 0.2s;
 }
 
-.modal-close:hover {
-    background-color: #555;
-}
-
 .modal-meta {
     display: flex;
     flex-wrap: wrap; /* 画面幅が狭い場合に折り返す */
@@ -553,12 +549,12 @@ article {
     display: flex !important;
     justify-content: center;
     align-items: center;
-    height: 450px; /* スライドの高さを固定 */
+    height: 380px; /* スライドの高さを固定 */
 }
 
 .modal-slider .slick-slide img,
 .modal-slider .slick-slide video {
-    max-height: 450px; /* スライダーの高さを制限 */
+    max-height: 380px; /* スライダーの高さを制限 */
     width: auto;
     max-width: 100%;
     object-fit: contain;
