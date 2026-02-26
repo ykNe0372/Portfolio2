@@ -6,7 +6,7 @@
 }
 
 html {
-    font-size: 100%;
+    font-size: 120%;
     scroll-behavior: smooth;
 }
 
@@ -64,8 +64,8 @@ li {
 }
 
 .wrapper {
-    font-size: 1.075rem;
-    max-width: 1100px;
+    font-size: 1.2rem;
+    max-width: 90%;
     margin: 0 auto;
     padding: 0 4%;
 }
@@ -77,32 +77,42 @@ li {
 
 .main-nav {
     display: flex;
-    font-size: 1.5rem;
-    margin-top: 34px;
+    font-size: 1.8rem;
+    margin-top: 40px;
     list-style: none;
 }
 .main-nav li {
-    margin-left: 72px;
+    margin: auto 45px;
 }
 .main-nav a {
     color: #432;
 }
 
+.page-header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    background-color: #fffef9;
+    border-bottom: 2px solid #d1dce2;
+}
+
+.header-logo {
+    height: 150px;
+}
+
+/* --- footer --- */
 .footer-nav {
     display: flex;
     justify-content: center;
-    gap: 120px;
+    gap: 150px;
     font-size: 1.5rem;
     margin: 34px 0;
     list-style: none;
 }
 .footer-nav a {
     color: #432;
-}
-
-.page-header {
-    display: flex;
-    justify-content: space-between;
 }
 
 /* ----- title ----- */
@@ -352,6 +362,89 @@ article {
     flex: 1; /* 文章部分が残りのスペースを埋めるようにする */
 }
 
+/* --- AboutMe --- */
+.aboutme-section {
+    position: relative;
+    overflow: hidden;
+}
+
+.aboutme-container {
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    min-height: 500px;
+    position: relative;
+}
+
+.aboutme-left {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.aboutme-title {
+    max-width: 100%;
+    height: auto;
+    max-height: 800px;
+}
+
+.aboutme-right {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.aboutme-top {
+    display: flex;
+    gap: 1.35rem;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+}
+
+.aboutme-icon {
+    width: clamp(80px, 15vw, 250px);
+    height: clamp(80px, 15vw, 250px);
+    aspect-ratio: 1;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 8px double #FFD1D7;
+    flex-shrink: 0;  /* 幅を固定 */
+}
+
+.aboutme-intro-top {
+    flex: 1;
+    margin: auto 0;
+    font-size: 1.2rem;
+}
+
+.aboutme-bottom {
+    font-size: 1.15rem;
+    margin: 0 1rem;
+}
+
+/* 斜めの境界線：擬似要素で実装 */
+/* .aboutme-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 15%;
+    bottom: 0;
+    width: 100%;
+    background: linear-gradient(
+        100deg,
+        transparent 0%,
+        transparent calc(50% - 50px),
+        #fffef9 calc(50% - 50px),
+        #fffef9 50%,
+        #ffd1d7 50%,
+        #ffd1d7 calc(50% + 50px),
+        transparent calc(50% + 50px),
+        transparent 100%
+    );
+    pointer-events: none;  クリック判定に影響を与えない
+} */
+
+/* --- History --- */
 .history-list {
     list-style: none;
     padding: 0;
