@@ -362,6 +362,18 @@ article {
     flex: 1; /* 文章部分が残りのスペースを埋めるようにする */
 }
 
+/* .aboutme-intro-top {
+    flex: 1;
+    font-size: 1rem;
+    line-height: 1.8;
+}
+
+.aboutme-bottom {
+    margin-top: 1rem;
+    font-size: 1rem;
+    line-height: 1.8;
+} */
+
 /* --- AboutMe --- */
 .aboutme-section {
     position: relative;
@@ -370,40 +382,42 @@ article {
 
 .aboutme-container {
     display: grid;
-    grid-template-columns: 2fr 3fr;
-    min-height: 500px;
+    grid-template-columns: 1fr; /* 縦並び: 左右を縦に並べる */
+    align-items: stretch;
+    gap: 0;
     position: relative;
 }
 
 .aboutme-left {
     display: flex;
-    align-items: center;
-    justify-content: center;
+    /* align-items: center;
+    justify-content: center; */
 }
 
 .aboutme-title {
     max-width: 100%;
     height: auto;
-    max-height: 800px;
+    max-height: 280px;
 }
 
 .aboutme-right {
-    padding: 1.5rem;
+    background: #fffef9;
+    padding-left: 20%;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: flex-start;
 }
 
 .aboutme-top {
     display: flex;
-    gap: 1.35rem;
+    gap: 1.5rem;
     align-items: flex-start;
     margin-bottom: 1rem;
 }
 
 .aboutme-icon {
-    width: clamp(80px, 15vw, 250px);
-    height: clamp(80px, 15vw, 250px);
+    width: clamp(80px, 15vw, 200px);
+    height: clamp(80px, 15vw, 200px);
     aspect-ratio: 1;
     object-fit: cover;
     border-radius: 10px;
@@ -411,38 +425,12 @@ article {
     flex-shrink: 0;  /* 幅を固定 */
 }
 
-.aboutme-intro-top {
+.aboutme-introduce {
     flex: 1;
     margin: auto 0;
+    padding-top: 3%;
     font-size: 1.2rem;
 }
-
-.aboutme-bottom {
-    font-size: 1.15rem;
-    margin: 0 1rem;
-}
-
-/* 斜めの境界線：擬似要素で実装 */
-/* .aboutme-container::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 15%;
-    bottom: 0;
-    width: 100%;
-    background: linear-gradient(
-        100deg,
-        transparent 0%,
-        transparent calc(50% - 50px),
-        #fffef9 calc(50% - 50px),
-        #fffef9 50%,
-        #ffd1d7 50%,
-        #ffd1d7 calc(50% + 50px),
-        transparent calc(50% + 50px),
-        transparent 100%
-    );
-    pointer-events: none;  クリック判定に影響を与えない
-} */
 
 /* --- History --- */
 .history-list {
