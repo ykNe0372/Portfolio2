@@ -77,12 +77,12 @@ li {
 
 .main-nav {
     display: flex;
-    font-size: 1.8rem;
-    margin-top: 40px;
+    font-size: 1.5rem;
+    margin-top: 35px;
     list-style: none;
 }
 .main-nav li {
-    margin: auto 45px;
+    margin: auto 50px;
 }
 .main-nav a {
     color: #432;
@@ -94,12 +94,16 @@ li {
     z-index: 100;
     display: flex;
     justify-content: space-between;
-    background-color: #fffef9;
+    background-color: rgba(255, 254, 249, 0.85);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
     border-bottom: 2px solid #d1dce2;
 }
 
 .header-logo {
-    height: 150px;
+    width: auto;
+    height: 110px;
+    padding: 5% 0 3% 0;
 }
 
 /* --- footer --- */
@@ -382,7 +386,7 @@ article {
 
 .aboutme-container {
     display: grid;
-    grid-template-columns: 1fr; /* 縦並び: 左右を縦に並べる */
+    grid-template-columns: 1fr;
     align-items: stretch;
     gap: 0;
     position: relative;
@@ -390,8 +394,6 @@ article {
 
 .aboutme-left {
     display: flex;
-    /* align-items: center;
-    justify-content: center; */
 }
 
 .aboutme-title {
@@ -433,16 +435,21 @@ article {
 }
 
 /* --- History --- */
+.history-container {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    align-items: start;
+    margin-top: 3vw;
+}
 .history-list {
-    list-style: none;
-    padding: 0;
-    margin-bottom: 50px;
     position: relative;
+    list-style: none;
+    margin-bottom: 50px;
 }
 .history-list::before {
     content: "";
     position: absolute;
-    left: 7.5rem; /* 縦線の位置を調整 */
+    left: 32rem; /* 縦線の位置を調整 */
     top: -3%;
     width: 3px;
     background: #00A5BF;
@@ -451,13 +458,13 @@ article {
 }
 .history-item {
     position: relative;
-    padding-left: 11rem; /* 縦線より右側に内容を配置 */
-    margin-bottom: 2rem;
+    margin-bottom: 1.85rem;
+    text-align: right;
 }
 .history-item::before {
     content: "";
     position: absolute;
-    left: 7.5rem; /* 縦線の中央に●を配置 */
+    left: 32rem; /* 縦線の中央に●を配置 */
     top: 0.4em; /* テキストの高さに合わせて微調整 */
     width: 10px;
     height: 10px;
@@ -470,9 +477,13 @@ article {
 }
 .history-date {
     position: absolute;
-    left: 0;
-    width: 6rem;
-    text-align: right;
+    top: 0;
+    right: 0;
+    width: 5rem;
+    text-align: left;
+}
+.history-content {
+    padding-right: 10rem;
 }
 
 /* ----- works ----- */
