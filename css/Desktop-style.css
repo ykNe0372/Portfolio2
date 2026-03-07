@@ -6,7 +6,7 @@
 }
 
 html {
-    font-size: 100%;
+    font-size: 120%;
     scroll-behavior: smooth;
 }
 
@@ -64,8 +64,8 @@ li {
 }
 
 .wrapper {
-    font-size: 1.075rem;
-    max-width: 1100px;
+    font-size: 1.2rem;
+    max-width: 90%;
     margin: 0 auto;
     padding: 0 4%;
 }
@@ -78,31 +78,45 @@ li {
 .main-nav {
     display: flex;
     font-size: 1.5rem;
-    margin-top: 34px;
+    margin-top: 35px;
     list-style: none;
 }
 .main-nav li {
-    margin-left: 72px;
+    margin: auto 50px;
 }
 .main-nav a {
     color: #432;
 }
 
+.page-header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    background-color: rgba(255, 254, 249, 0.85);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border-bottom: 2px solid #d1dce2;
+}
+
+.header-logo {
+    width: auto;
+    height: 110px;
+    padding: 5% 0 3% 0;
+}
+
+/* --- footer --- */
 .footer-nav {
     display: flex;
     justify-content: center;
-    gap: 120px;
+    gap: 150px;
     font-size: 1.5rem;
     margin: 34px 0;
     list-style: none;
 }
 .footer-nav a {
     color: #432;
-}
-
-.page-header {
-    display: flex;
-    justify-content: space-between;
 }
 
 /* ----- title ----- */
@@ -352,16 +366,85 @@ article {
     flex: 1; /* 文章部分が残りのスペースを埋めるようにする */
 }
 
-.history-list {
-    list-style: none;
-    padding: 0;
-    margin-bottom: 50px;
+/* .aboutme-intro-top {
+    flex: 1;
+    font-size: 1rem;
+    line-height: 1.8;
+}
+
+.aboutme-bottom {
+    margin-top: 1rem;
+    font-size: 1rem;
+    line-height: 1.8;
+} */
+
+/* --- AboutMe --- */
+.aboutme-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: stretch;
+    gap: 0;
     position: relative;
+}
+
+.aboutme-left {
+    display: flex;
+}
+
+.aboutme-title {
+    max-width: 100%;
+    height: auto;
+    max-height: 280px;
+}
+
+.aboutme-right {
+    background: #fffef9;
+    padding-left: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.aboutme-top {
+    display: flex;
+    gap: 1.5rem;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+}
+
+.aboutme-icon {
+    width: clamp(80px, 15vw, 200px);
+    height: clamp(80px, 15vw, 200px);
+    aspect-ratio: 1;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 8px double #FFD1D7;
+    flex-shrink: 0;  /* 幅を固定 */
+}
+
+.aboutme-introduce {
+    flex: 1;
+    margin: auto 0;
+    padding-top: 3%;
+    font-size: 1.2rem;
+}
+
+/* --- History --- */
+.history-container {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    align-items: start;
+    margin-top: 3vw;
+}
+.history-list {
+    position: relative;
+    list-style: none;
+    margin-bottom: 50px;
 }
 .history-list::before {
     content: "";
     position: absolute;
-    left: 7.5rem; /* 縦線の位置を調整 */
+    left: 32rem; /* 縦線の位置を調整 */
     top: -3%;
     width: 3px;
     background: #00A5BF;
@@ -370,13 +453,13 @@ article {
 }
 .history-item {
     position: relative;
-    padding-left: 11rem; /* 縦線より右側に内容を配置 */
-    margin-bottom: 2rem;
+    margin-bottom: 1.85rem;
+    text-align: right;
 }
 .history-item::before {
     content: "";
     position: absolute;
-    left: 7.5rem; /* 縦線の中央に●を配置 */
+    left: 32rem; /* 縦線の中央に●を配置 */
     top: 0.4em; /* テキストの高さに合わせて微調整 */
     width: 10px;
     height: 10px;
@@ -389,26 +472,127 @@ article {
 }
 .history-date {
     position: absolute;
-    left: 0;
-    width: 6rem;
+    top: 0;
+    right: 0;
+    width: 5rem;
+    text-align: left;
+}
+.history-content {
+    padding-right: 10rem;
+}
+
+/* ----- skills ----- */
+.skills-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: stretch;
+    gap: 0;
+    position: relative;
+}
+
+.skills-title {
+    max-width: 100%;
+    height: auto;
+    max-height: 280px;
+}
+
+.skills-right {
+    background: #fffef9;
+    padding-left: 10rem;
+}
+
+.skills-list {
+    display: grid;
+    gap: 26px;
+    grid-template-columns: repeat(auto-fit, minmax(331px, 1fr));
+    margin-top: 2%;
+    margin-bottom: 50px;
+}
+
+.skill-item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    background-color: #fffef9;
+}
+
+.skill-icon {
+    width: 120px;
+    height: 120px;
+    object-fit: contain;
+    flex-shrink: 0; /* 画像が縮まないようにする */
+}
+
+.skill-details {
+    flex-grow: 1;
+}
+.skill-name {
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin: 0;
+}
+.skill-level {
+    margin: -6% 0 10px;
+}
+.skill-level-percent {
+    display: block;
     text-align: right;
+    font-size: 1rem;
+    color: #555;
+}
+.skill-level-bar-container {
+    width: 100%;
+    height: 10px;
+    background-color: #e0e0e0;
+    border-radius: 5px;
+    overflow: hidden;
+}
+.skill-level-bar {
+    height: 100%;
+    background-color: #00A5BF;
+    border-radius: 5px;
+}
+.skill-description {
+    font-size: 0.9rem;
+    margin: 0;
 }
 
 /* ----- works ----- */
+.works-section {
+    position: relative;
+    overflow: hidden;
+}
+
+.works-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: stretch;
+    gap: 0;
+    position: relative;
+}
+
 .works-title {
-    font-size: 1.6rem;
-    margin-bottom: 2%;
-    padding-bottom: 1.5%;
-    border-bottom: 4px dotted #3da;
+    max-width: 100%;
+    height: auto;
+    max-height: 280px;
+}
+
+.works-right {
+    background: #fffef9;
+    padding-left: 10rem;
 }
 
 .works-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 2rem;
 }
 
 .work-card {
+    /* flex: 0 0 300px;  2枚ずつ表示 */
     background-color: #fff;
     border-radius: 10px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
@@ -427,6 +611,60 @@ article {
     height: 200px;
     object-fit: cover;
     border-radius: 10px 10px 0 0;
+}
+
+/* .work-card:hover .work-card-img {
+    width: auto;
+    height: 280px;
+    flex-shrink: 0;
+} */
+
+.work-card-body {
+    padding: 1rem 1.2rem;
+}
+
+.work-card:hover .work-card-body {
+    display: flex;
+    flex-direction: column;
+}
+
+/* ページネーション */
+.works-pagination {
+    display: flex;
+    gap: 2rem;
+    margin: 2rem 0 0 10rem;
+}
+
+.works-nav-btn {
+    background: #00A5BF;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 44px;
+    height: 44px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.works-nav-btn:hover:not(:disabled) {
+    background: #008fa3;
+    transform: scale(1.1);
+}
+
+.works-nav-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.works-page-indicator {
+    font-size: 1rem;
+    font-weight: bold;
+    min-width: 60px;
+    text-align: center;
 }
 
 .work-card-body {
@@ -457,6 +695,46 @@ article {
     padding: 0.3rem 0.6rem;
     border-radius: 5px;
     margin-right: 0.5rem;
+}
+
+/* ----- links ----- */
+.links-container {
+    display: grid;
+    grid-template-columns: 3fr 7fr;
+    align-items: start;
+    margin-top: 3vw;
+}
+
+.links-right {
+    margin-top: 3rem;
+}
+
+.link-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+.link-item a {
+    display: flex;
+    flex-direction: column; /* アイコンとテキストを縦に並べる */
+    align-items: center; /* 中央揃えにする */
+    gap: 8px; /* アイコンとテキストの間のスペース */
+    transition: transform 0.3s ease; /* ホバー時のアニメーション */
+}
+.link-item a:hover {
+    transform: scale(1.1); /* ホバー時に少し拡大する */
+}
+.link-icon {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+}
+.link-text {
+    font-size: 1.2rem;
+    margin: 0;
 }
 
 /* ----- Modal ----- */
@@ -575,106 +853,6 @@ article {
 }
 .slick-next:before {
     content: '>';
-}
-
-/* ----- skills ----- */
-.skills-list {
-    display: grid;
-    gap: 26px;
-    grid-template-columns: repeat(auto-fit, minmax(331px, 1fr));
-    margin-top: 6%;
-    margin-bottom: 50px;
-}
-.skill-item {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    padding: 20px;
-    border: 2px solid #ddd;
-    border-radius: 10px;
-    background-color: #fffef9;
-}
-.skill-icon {
-    width: 80px;
-    height: 80px;
-    object-fit: contain;
-    flex-shrink: 0; /* 画像が縮まないようにする */
-}
-.skill-details {
-    flex-grow: 1;
-}
-.skill-name {
-    font-size: 1.4rem;
-    font-weight: bold;
-    margin: 0;
-}
-.skill-level {
-    margin: -6% 0 10px;
-}
-.skill-level-percent {
-    display: block;
-    text-align: right;
-    font-size: 1rem;
-    color: #555;
-}
-.skill-level-bar-container {
-    width: 100%;
-    height: 10px;
-    background-color: #e0e0e0;
-    border-radius: 5px;
-    overflow: hidden;
-}
-.skill-level-bar {
-    height: 100%;
-    background-color: #00A5BF;
-    border-radius: 5px;
-}
-.skill-description {
-    
-    font-size: 0.9rem;
-    margin: 0;
-}
-
-@keyframes rotation {
-    0% {
-        opacity: 0;
-        transform-origin: right bottom;
-        transform: rotate(-60deg);
-    }
-    100% {
-        opacity: 1;
-        transform-origin: right bottom;
-        transform: rotate(0);
-    }
-}
-
-/* ----- links ----- */
-.link-list {
-    display: flex;
-    justify-content: center;
-    gap: 120px;
-    list-style: none;
-    padding: 0;
-    margin-top: 20px;
-}
-.link-item a {
-    display: flex;
-    flex-direction: column; /* アイコンとテキストを縦に並べる */
-    align-items: center; /* 中央揃えにする */
-    gap: 8px; /* アイコンとテキストの間のスペース */
-    transition: transform 0.3s ease; /* ホバー時のアニメーション */
-}
-.link-item a:hover {
-    transform: scale(1.1); /* ホバー時に少し拡大する */
-}
-.link-icon {
-    width: 100px;
-    height: 100px;
-    object-fit: contain;
-}
-.link-text {
-    font-size: 1.2rem;
-    margin: 0;
 }
 
 /* ----- footer ----- */

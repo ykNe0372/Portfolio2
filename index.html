@@ -43,12 +43,12 @@
   </div>
 
   <header class="page-header wrapper">
-    <h1 class="title"><a href="index.html">ゆきねこ｡</a></h1>
+    <a href="#home"><img class="header-logo" src="img/yukineko_logo.png" alt="ゆきねこのロゴ。凍ってそう"></a>
     <nav>
       <ul class="main-nav">
         <li><a href="#home" class="underline_anim">Home</a></li>
-        <li><a href="#works" class="underline_anim">Works</a></li>
         <li><a href="#skills" class="underline_anim">Skills</a></li>
+        <li><a href="#works" class="underline_anim">Works</a></li>
         <li><a href="#links" class="underline_anim">Links</a></li>
       </ul>
     </nav>
@@ -66,7 +66,7 @@
     </div>
   </div>
 
-  <div class="home-content title-wrapper">
+  <div class="home-content title-wrapper" id="home">
     <section class="c-mv js-mv">
       <div class="l-inner">
         <div class="c-mv_tit-wrap">
@@ -81,7 +81,7 @@
       </div>
     </section>
   </div>
-  <div class="home-content title-wrapper" id="home">
+  <div class="home-content title-wrapper">
     <div class="page-title">ykNe0372's</div>
     <div class="page-title">portfolio</div>
     <p class="page-subtitle">
@@ -91,309 +91,349 @@
 
   <div class="main-content wrapper">
     <article>
-      <header class="chapter-title">About me</header>
-      <div class="horizontal">
-        <img class="frame" src="img/my-icon.png" alt="アイコン" />
-        <p>
-          大阪公立大学工業高等専門学校 4年生<br /><br />
-          名前: ゆきねこ｡<br />
-          趣味: ゲーム / イラスト作成 / ピアノ・ギターの演奏<br /><br />
-          Python, Unity, C++ を中心に、興味を持ったものはプログラミングに限らず、何でも勉強しています。
-          また、今年の春休みに基本情報技術者試験を受験しようと考えているので、合格に向けて勉強に力を入れています
-          （冬休みに取得予定でしたが、体調不良や課題が重なり受験できませんでした）。<br /><br />
-          Unity を使ったゲーム開発は現在、個人で1つ/チームで2つ制作しています。
-          なるべく早い公開を目指して制作頑張ります。
-        </p>
-      </div>
+      <section class="aboutme-section">
+        <div class="aboutme-container wrapper">
+          <!-- 後で背景変える＆丸とかを浮かせる -->
+          <!-- 左側: タイポグラフィ画像 -->
+          <div class="aboutme-left">
+            <img class="aboutme-title" src="img/section-titles/AboutMe.png" alt="About Me">
+          </div>
 
-      <header class="chapter-title">History</header>
-      <ul class="history-list">
-        <li class="history-item">
-          <span class="history-date">2022/04</span>
-          <span class="history-content">大阪公立大学工業高等専門学校に入学</span>
-        </li>
-
-        <li class="history-item">
-          <span class="history-date">2023/04</span>
-          <span class="history-content">知能情報コースに進級</span>
-        </li>
-
-        <li class="history-item no-dot">
-          <span class="history-date">10月</span>
-          <span class="history-content">高専祭展示のゲームをチームで作成</span>
-        </li>
-
-        <li class="history-item no-dot">
-          <span class="history-date">12月</span>
-          <span class="history-content">Python を使用してパズルゲームを作成</span>
-        </li>
-
-        <li class="history-item">
-          <span class="history-date">2024/01</span>
-          <span class="history-content">Hack U 大阪公大高専 2023 に出場</span>
-        </li>
-
-        <li class="history-item no-dot">
-          <span class="history-date">6月～</span>
-          <span class="history-content">Unity を使用してパズルアクションゲームの作成を開始</span>
-        </li>
-
-        <li class="history-item no-dot">
-          <span class="history-date">10～11月</span>
-          <span class="history-content">高専祭展示のシューティングゲームをチームで作成</span>
-        </li>
-        <li class="history-item no-dot">
-          <span class="history-date">12月</span>
-          <span class="history-content">Unity 1Week Game Jam（お題「ない」）に参加</span>
-        </li>
-        <li class="history-item">
-          <span class="history-date">2025/04</span>
-          <span class="history-content">
-            Unity 1Week Game Jam（お題「あい」）に参加<br />
-            Unity でタイピング×戦闘ゲームの制作を開始
-          </span>
-        </li>
-        <li class="history-item">
-          <span class="history-date">12月</span>
-          <span class="history-content">
-            Unity 1Week Game Jam（お題「もうひとつ」）に参加中<br />
-            （大遅刻をしていますが、現在チーム制作中です）
-          </span>
-        </li>
-        <li class="history-item">
-          <span class="history-date">現在</span>
-          <span class="history-content">
-            基本情報技術者試験の取得に向けて勉強中<br />
-            その他 SQL の勉強や Unity でのゲーム開発中
-          </span>
-        </li>
-      </ul>
-
-
-      <header class="chapter-title" id="works">Works</header>
-      <div class="main-content wrapper">
-        <article>
-          <div class="works-grid">
-          <!-- ひまつぶしbotくん -->
-          <div class="work-card" data-modal-target="discord-bot">
-            <img src="img/samples/bot_prof.png" alt="ひまつぶしbotくん" class="work-card-img">
-            <div class="work-card-body">
-              <h3 class="work-card-title">ひまつぶしbotくん</h3>
-              <p class="work-card-description">Discord で暇つぶしができる多機能 Bot。</p>
-              <div class="work-card-tools">
-                <span class="work-card-tool-item">Python <i class="fa-brands fa-python"></i></span>
+          <!-- 右側: アイコン + 自己紹介 -->
+          <div class="aboutme-right">
+            <div class="aboutme-top">
+              <img class="aboutme-icon" src="img/my-icon.png" alt="アイコン。ねむそう" />
+              <div class="aboutme-introduce">
+                <p>
+                  大阪公立大学工業高等専門学校 4年生<br />
+                  名前: ゆきねこ｡<br />
+                  趣味: ゲーム制作 / イラスト作成 / ピアノ・ギターの演奏<br /><br />
+                  興味の湧いたものに目が無い人。基本情報技術者の資格を春休み中に取る予定。
+                </p>
               </div>
             </div>
           </div>
-          <!-- 特殊ルールマインスイーパー -->
-          <div class="work-card" data-modal-target="minesweeper">
-            <img src="img/samples/CUI_minesweeper.png" alt="特殊ルールマインスイーパー" class="work-card-img">
-            <div class="work-card-body">
-              <h3 class="work-card-title">特殊ルールマインスイーパー</h3>
-              <p class="work-card-description">CUI で遊べる特殊ルールマインスイーパー。</p>
-              <div class="work-card-tools">
-                <span class="work-card-tool-item">C++</span>
-              </div>
-            </div>
-          </div>
-          <!-- Ice Hopper -->
-          <div class="work-card" data-modal-target="ice-hopper">
-            <img src="img/samples/U1GM-2_1.png" alt="Ice Hopper" class="work-card-img">
-            <div class="work-card-body">
-              <h3 class="work-card-title">Ice Hopper</h3>
-              <p class="work-card-description">Unity 1Week Game Jam 参加作品。</p>
-              <div class="work-card-tools">
-                <span class="work-card-tool-item">Unity <i class="fa-brands fa-unity"></i></span>
-              </div>
-            </div>
-          </div>
-          <!-- 音をつたえるあかりちゃん -->
-          <div class="work-card" data-modal-target="akari-puzzle">
-            <img src="img/samples/Akari_puzzle2.png" alt="音をつたえるあかりちゃん" class="work-card-img">
-            <div class="work-card-body">
-              <h3 class="work-card-title">音をつたえるあかりちゃん</h3>
-              <p class="work-card-description">音符を運んでギミックを動かす倉庫番。</p>
-              <div class="work-card-tools">
-                <span class="work-card-tool-item">Python <i class="fa-brands fa-python"></i></span>
-              </div>
-            </div>
-          </div>
-          <!-- TodoApp -->
-          <div class="work-card" data-modal-target="todo-app">
-            <img src="img/samples/Todo_1.png" alt="TodoApp" class="work-card-img">
-            <div class="work-card-body">
-              <h3 class="work-card-title">TodoApp</h3>
-              <p class="work-card-description">Reactで作成したシンプルな Todo アプリ。</p>
-              <div class="work-card-tools">
-                <span class="work-card-tool-item">React <i class="fa-brands fa-react"></i></span>
-              </div>
-            </div>
-          </div>
-          <!-- 殲滅サバイブ -->
-          <div class="work-card" data-modal-target="survive">
-            <img src="img/samples/Survive.png" alt="殲滅サバイブ" class="work-card-img">
-            <div class="work-card-body">
-              <h3 class="work-card-title">殲滅サバイブ</h3>
-              <p class="work-card-description">2023年度高専祭で展示したサバイバルゲーム。</p>
-              <div class="work-card-tools">
-                <span class="work-card-tool-item">Unity <i class="fa-brands fa-unity"></i></span>
-              </div>
-            </div>
-          </div>
-          <!-- お金がないなら集めればいい -->
-          <div class="work-card" data-modal-target="collect-money">
-            <img src="img/samples/U1GM-1_3.png" alt="お金がないなら集めればいい" class="work-card-img">
-            <div class="work-card-body">
-              <h3 class="work-card-title">お金がないなら集めればいい</h3>
-              <p class="work-card-description">Unity 1Week Game Jam 初参加作品。</p>
-              <div class="work-card-tools">
-                <span class="work-card-tool-item">Unity <i class="fa-brands fa-unity"></i></span>
-              </div>
-            </div>
-          </div>
-          <!-- ブログアプリ -->
-          <div class="work-card" data-modal-target="blog-app">
-            <img src="img/samples/blog_1.png" alt="ブログアプリ" class="work-card-img">
-            <div class="work-card-body">
-              <h3 class="work-card-title">ブログアプリ</h3>
-              <p class="work-card-description">Next.js と Supabase で作成したブログアプリ。</p>
-              <div class="work-card-tools">
-                <span class="work-card-tool-item">React <i class="fa-brands fa-react"></i></span>
-              </div>
-            </div>
-          </div>
-          <!-- シューティングゲーム -->
-          <div class="work-card" data-modal-target="shooting">
-            <img src="img/samples/controller.jpg" alt="シューティングゲーム" class="work-card-img">
-            <div class="work-card-body">
-              <h3 class="work-card-title">シューティングゲーム</h3>
-              <p class="work-card-description">2024年度高専祭で展示した Joy-Con で操作するシューティング。</p>
-              <div class="work-card-tools">
-                <span class="work-card-tool-item">Unity <i class="fa-brands fa-unity"></i></span>
-              </div>
-            </div>
-          </div>
-          <!-- じゃんけんシミュレーター -->
-          <div class="work-card" data-modal-target="rps">
-            <img src="img/samples/RPS.png" alt="じゃんけんシミュレーター" class="work-card-img">
-            <div class="work-card-body">
-              <h3 class="work-card-title">じゃんけんシミュレーター</h3>
-              <p class="work-card-description">Google Colab.で作成した CUI じゃんけんゲーム。</p>
-              <div class="work-card-tools">
-                <span class="work-card-tool-item">Python <i class="fa-brands fa-python"></i></span>
-              </div>
-            </div>
-          </div>
-        </article>
-      </div>
+        </div>
+      </section>
 
-      <header class="chapter-title" id="skills">Skills</header>
+      <section class="history-section">
+        <div class="history-container wrapper">
+          <!-- 左側：タイポグラフィ画像 -->
+          <div class="history-left">
+            <img src="img/section-titles/History.png" alt="History" class="history-title">
+          </div>
 
-      <div class="skills-list">
-        <div class="skill-item inview_re fadeIn_up">
-          <img src="img/icons/cpp_logo.png" alt="C++" class="skill-icon">
-          <div class="skill-details">
-            <h4 class="skill-name">C++</h4>
-            <div class="skill-level"><span class="skill-level-percent">70%</span><div class="skill-level-bar-container"><div class="skill-level-bar" style="width: 70%;"></div></div></div>
-            <p class="skill-description">部活動・授業で使用しています。人生で初めて触った言語で使用歴は最も長いですが、まだまだ勉強中です。</p>
+          <!-- 右側：リスト（線＋日付／内容） -->
+          <div class="history-right">
+            <ul class="history-list">
+              <li class="history-item">
+                <span class="history-date">2022/04</span>
+                <span class="history-content">大阪公立大学工業高等専門学校に入学</span>
+              </li>
+              <li class="history-item">
+                <span class="history-date">2023/04</span>
+                <span class="history-content">知能情報コースに進級</span>
+              </li>
+              <li class="history-item no-dot">
+                <span class="history-date">10月</span>
+                <span class="history-content">高専祭展示のゲームをチームで作成</span>
+              </li>
+              <li class="history-item no-dot">
+                <span class="history-date">12月</span>
+                <span class="history-content">Python を使用してパズルゲームを作成</span>
+              </li>
+              <li class="history-item">
+                <span class="history-date">2024/01</span>
+                <span class="history-content">Hack U 大阪公大高専 2023 に出場</span>
+              </li>
+              <li class="history-item no-dot">
+                <span class="history-date">6月～</span>
+                <span class="history-content">Unity を使用してパズルアクションゲームの作成を開始</span>
+              </li>
+              <li class="history-item no-dot">
+                <span class="history-date">10～11月</span>
+                <span class="history-content">高専祭展示のシューティングゲームをチームで作成</span>
+              </li>
+              <li class="history-item no-dot">
+                <span class="history-date">12月</span>
+                <span class="history-content">Unity 1Week Game Jam（お題「ない」）に参加</span>
+              </li>
+              <li class="history-item">
+                <span class="history-date">2025/04</span>
+                <span class="history-content">
+                  Unity 1Week Game Jam（お題「あい」）に参加<br />
+                </span>
+              </li>
+              <li class="history-item">
+                <span class="history-date">現在</span>
+                <span class="history-content">基本情報技術者試験や SQL の勉強、及びゲーム開発中</span>
+              </li>
+            </ul>
           </div>
         </div>
-        <div class="skill-item inview_re fadeIn_up">
-          <img src="img/icons/python_logo.png" alt="Python" class="skill-icon">
-          <div class="skill-details">
-            <h4 class="skill-name">Python</h4>
-            <div class="skill-level"><span class="skill-level-percent">80%</span><div class="skill-level-bar-container"><div class="skill-level-bar" style="width: 80%;"></div></div></div>
-            <p class="skill-description">Discord の bot の開発や授業で使用しています。
-              かなり使用頻度が高い言語で、徐々に読めるようになってきました。</p>
-          </div>
-        </div>
-        <div class="skill-item inview_re fadeIn_up">
-          <img src="img/icons/HTML5_Logo.png" alt="HTML" class="skill-icon">
-          <div class="skill-details">
-            <h4 class="skill-name">HTML</h4>
-            <div class="skill-level"><span class="skill-level-percent">65%</span><div class="skill-level-bar-container"><div class="skill-level-bar" style="width: 65%;"></div></div></div>
-            <p class="skill-description">このサイトが作れる程度です。頑張ってもっとデザインを凝ったサイトを作成してみたいと思っています。</p>
-          </div>
-        </div>
-        <div class="skill-item inview_re fadeIn_up">
-          <img src="img/icons/CSS3_logo.png" alt="CSS" class="skill-icon">
-          <div class="skill-details">
-            <h4 class="skill-name">CSS</h4>
-            <div class="skill-level"><span class="skill-level-percent">70%</span><div class="skill-level-bar-container"><div class="skill-level-bar" style="width: 70%;"></div></div></div>
-            <p class="skill-description">このサイトが作れる程度です。CSSアニメーションに興味があり、習得したいと考えています。</p>
-          </div>
-        </div>
-        <div class="skill-item inview_re fadeIn_up">
-          <img src="img/icons/JS_logo.png" alt="JavaScript" class="skill-icon">
-          <div class="skill-details">
-            <h4 class="skill-name">JavaScript</h4>
-            <div class="skill-level"><span class="skill-level-percent">35%</span><div class="skill-level-bar-container"><div class="skill-level-bar" style="width: 35%;"></div></div></div>
-            <p class="skill-description">HTML/CSS と併用しており、主にサイトに動きを与えるために使用しています。
-              あまり慣れておらず、実装には時間がかかります。</p>
-          </div>
-        </div>
-        <div class="skill-item inview_re fadeIn_up">
-          <img src="img/icons/React-logo.svg" alt="React" class="skill-icon">
-          <div class="skill-details">
-            <h4 class="skill-name">React</h4>
-            <div class="skill-level"><span class="skill-level-percent">40%</span><div class="skill-level-bar-container"><div class="skill-level-bar" style="width: 40%;"></div></div></div>
-            <p class="skill-description">授業で Todo アプリを作成する際に使用しました。TypeScript と TailwindCSS を用いて開発しています。
-            </p>
-          </div>
-        </div>
-        <div class="skill-item inview_re fadeIn_up">
-          <img src="img/icons/unity_logo.png" alt="Unity" class="skill-icon">
-          <div class="skill-details">
-            <h4 class="skill-name">Unity</h4>
-            <div class="skill-level"><span class="skill-level-percent">75%</span><div class="skill-level-bar-container"><div class="skill-level-bar" style="width: 75%;"></div></div></div>
-            <p class="skill-description">ゲームを制作する際に使用しています。個人・チーム問わず制作をしています。
-              2Dゲームばかり制作しているので、3Dゲームの制作について検討しています。
-            </p>
-          </div>
-        </div>
-        <div class="skill-item inview_re fadeIn_up">
-          <img src="img/icons/PostgreSQL_logo.png" alt="PostgreSQL" class="skill-icon">
-          <div class="skill-details">
-            <h4 class="skill-name">PostgreSQL</h4>
-            <div class="skill-level"><span class="skill-level-percent">25%</span><div class="skill-level-bar-container"><div class="skill-level-bar" style="width: 25%;"></div></div></div>
-            <p class="skill-description">データベースの授業の際に使用しました。
-              Discord の bot のデータ管理を SQL に移行するため勉強中です。</p>
-          </div>
-        </div>
-        <div class="skill-item inview_re fadeIn_up">
-          <img src="img/icons/git_logo.png" alt="Git" class="skill-icon">
-          <div class="skill-details">
-            <h4 class="skill-name">Git</h4>
-            <div class="skill-level"><span class="skill-level-percent">85%</span><div class="skill-level-bar-container"><div class="skill-level-bar" style="width: 85%;"></div></div></div>
-            <p class="skill-description">何らかの開発を行う際は必ず使用しています。
-              コマンドでの操作もプッシュやプル、マージなどの基本操作であれば可能です。</p>
-          </div>
-        </div>
-        <div class="skill-item inview_re fadeIn_up">
-          <img src="img/icons/docker_logo.png" alt="Docker" class="skill-icon">
-          <div class="skill-details">
-            <h4 class="skill-name">Docker</h4>
-            <div class="skill-level"><span class="skill-level-percent">20%</span><div class="skill-level-bar-container"><div class="skill-level-bar" style="width: 20%;"></div></div></div>
-            <p class="skill-description">実験実習や授業などで使用しました。実用出来るほど理解できていないため勉強中です。</p>
-          </div>
-        </div>
-      </div>
+      </section>
 
-      <header class="chapter-title" id="links">Links</header>
-        <ul class="link-list">
-          <li class="link-item">
-            <a href="https://twitter.com/yukineko_K1" target="_blank" rel="noopener noreferrer">
-              <img src="img/icons/twitter_icon.png" alt="Twitter" class="link-icon">
-              <p class="link-text">Twitter: @yukineko_K1</p>
-            </a>
-          </li>
-          <li class="link-item">
-            <a href="https://github.com/ykNe0372" target="_blank" rel="noopener noreferrer">
-              <img src="img/icons/github_icon.png" alt="github" class="link-icon">
-              <p class="link-text">GitHub: ykNe0372</p>
-            </a>
-          </li>
-        </ul>
+      <section class="skills-section" id="skills">
+        <div class="skills-container wrapper">
+          <!-- 左側：タイポグラフィ画像 -->
+          <div class="skills-left">
+            <img src="img/section-titles/Skills.png" alt="Skills" class="skills-title">
+          </div>
+
+          <!-- 右側：使用ツール -->
+          <div class="skills-right">
+            <div class="skills-list">
+              <div class="skill-item">
+                <img src="img/icons/cpp_logo.png" alt="C++" class="skill-icon">
+                <div class="skill-details">
+                  <h4 class="skill-name">C++</h4>
+                  <div class="skill-level"><span class="skill-level-percent">70%</span><div class="skill-level-bar-container"><div class="skill-level-bar" style="width: 70%;"></div></div></div>
+                  <p class="skill-description">部活動・授業で使用しています。人生で初めて触った言語で使用歴は最も長いですが、まだまだ勉強中です。</p>
+                </div>
+              </div>
+              <div class="skill-item">
+                <img src="img/icons/python_logo.png" alt="Python" class="skill-icon">
+                <div class="skill-details">
+                  <h4 class="skill-name">Python</h4>
+                  <div class="skill-level"><span class="skill-level-percent">80%</span><div class="skill-level-bar-container"><div class="skill-level-bar" style="width: 80%;"></div></div></div>
+                  <p class="skill-description">Discord の bot の開発や授業で使用しています。
+                    かなり使用頻度が高い言語で、徐々に読めるようになってきました。</p>
+                </div>
+              </div>
+              <div class="skill-item">
+                <img src="img/icons/HTML5_Logo.png" alt="HTML" class="skill-icon">
+                <div class="skill-details">
+                  <h4 class="skill-name">HTML</h4>
+                  <div class="skill-level"><span class="skill-level-percent">65%</span><div class="skill-level-bar-container"><div class="skill-level-bar" style="width: 65%;"></div></div></div>
+                  <p class="skill-description">このサイトが作れる程度です。頑張ってもっとデザインを凝ったサイトを作成してみたいと思っています。</p>
+                </div>
+              </div>
+              <div class="skill-item">
+                <img src="img/icons/CSS3_logo.png" alt="CSS" class="skill-icon">
+                <div class="skill-details">
+                  <h4 class="skill-name">CSS</h4>
+                  <div class="skill-level"><span class="skill-level-percent">70%</span><div class="skill-level-bar-container"><div class="skill-level-bar" style="width: 70%;"></div></div></div>
+                  <p class="skill-description">このサイトが作れる程度です。CSSアニメーションに興味があり、習得したいと考えています。</p>
+                </div>
+              </div>
+              <div class="skill-item">
+                <img src="img/icons/JS_logo.png" alt="JavaScript" class="skill-icon">
+                <div class="skill-details">
+                  <h4 class="skill-name">JavaScript</h4>
+                  <div class="skill-level"><span class="skill-level-percent">35%</span><div class="skill-level-bar-container"><div class="skill-level-bar" style="width: 35%;"></div></div></div>
+                  <p class="skill-description">HTML/CSS と併用しており、主にサイトに動きを与えるために使用しています。
+                    あまり慣れておらず、実装には時間がかかります。</p>
+                </div>
+              </div>
+              <div class="skill-item">
+                <img src="img/icons/React-logo.svg" alt="React" class="skill-icon">
+                <div class="skill-details">
+                  <h4 class="skill-name">React</h4>
+                  <div class="skill-level"><span class="skill-level-percent">40%</span><div class="skill-level-bar-container"><div class="skill-level-bar" style="width: 40%;"></div></div></div>
+                  <p class="skill-description">授業で Todo アプリを作成する際に使用しました。TypeScript と TailwindCSS を用いて開発しています。
+                  </p>
+                </div>
+              </div>
+              <div class="skill-item">
+                <img src="img/icons/unity_logo.png" alt="Unity" class="skill-icon">
+                <div class="skill-details">
+                  <h4 class="skill-name">Unity</h4>
+                  <div class="skill-level"><span class="skill-level-percent">75%</span><div class="skill-level-bar-container"><div class="skill-level-bar" style="width: 75%;"></div></div></div>
+                  <p class="skill-description">ゲームを制作する際に使用しています。個人・チーム問わず制作をしています。
+                    2Dゲームばかり制作しているので、3Dゲームの制作について検討しています。
+                  </p>
+                </div>
+              </div>
+              <div class="skill-item">
+                <img src="img/icons/PostgreSQL_logo.png" alt="PostgreSQL" class="skill-icon">
+                <div class="skill-details">
+                  <h4 class="skill-name">PostgreSQL</h4>
+                  <div class="skill-level"><span class="skill-level-percent">25%</span><div class="skill-level-bar-container"><div class="skill-level-bar" style="width: 25%;"></div></div></div>
+                  <p class="skill-description">データベースの授業の際に使用しました。
+                    Discord の bot のデータ管理を SQL に移行するため勉強中です。</p>
+                </div>
+              </div>
+              <div class="skill-item">
+                <img src="img/icons/git_logo.png" alt="Git" class="skill-icon">
+                <div class="skill-details">
+                  <h4 class="skill-name">Git</h4>
+                  <div class="skill-level"><span class="skill-level-percent">85%</span><div class="skill-level-bar-container"><div class="skill-level-bar" style="width: 85%;"></div></div></div>
+                  <p class="skill-description">何らかの開発を行う際は必ず使用しています。
+                    コマンドでの操作もプッシュやプル、マージなどの基本操作であれば可能です。</p>
+                </div>
+              </div>
+              <div class="skill-item">
+                <img src="img/icons/docker_logo.png" alt="Docker" class="skill-icon">
+                <div class="skill-details">
+                  <h4 class="skill-name">Docker</h4>
+                  <div class="skill-level"><span class="skill-level-percent">20%</span><div class="skill-level-bar-container"><div class="skill-level-bar" style="width: 20%;"></div></div></div>
+                  <p class="skill-description">実験実習や授業などで使用しました。実用出来るほど理解できていないため勉強中です。</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="works-section" id="works">
+        <div class="works-container wrapper">
+          <!-- 左側：タイトル画像 -->
+          <div class="works-left">
+            <img class="works-title" src="img/section-titles/Works.png" alt="Works">
+          </div>
+
+          <!-- 右側：カードグリッド + ページネーション -->
+          <div class="works-right">
+            <div class="works-scroll-wrapper">
+              <div class="works-grid" id="worksGrid">
+                <!-- ひまつぶしbotくん -->
+                <div class="work-card" data-modal-target="discord-bot">
+                  <img src="img/samples/bot_prof.png" alt="ひまつぶしbotくん" class="work-card-img">
+                  <div class="work-card-body">
+                    <h3 class="work-card-title">ひまつぶしbotくん</h3>
+                    <p class="work-card-description">Discord で暇つぶしができる多機能 Bot。</p>
+                    <div class="work-card-tools">
+                      <span class="work-card-tool-item">Python <i class="fa-brands fa-python"></i></span>
+                    </div>
+                  </div>
+                </div>
+                <!-- 特殊ルールマインスイーパー -->
+                <div class="work-card" data-modal-target="minesweeper">
+                  <img src="img/samples/CUI_minesweeper.png" alt="特殊ルールマインスイーパー" class="work-card-img">
+                  <div class="work-card-body">
+                    <h3 class="work-card-title">特殊ルールマインスイーパー</h3>
+                    <p class="work-card-description">CUI で遊べる特殊ルールマインスイーパー。</p>
+                    <div class="work-card-tools">
+                      <span class="work-card-tool-item">C++</span>
+                    </div>
+                  </div>
+                </div>
+                <!-- Ice Hopper -->
+                <div class="work-card" data-modal-target="ice-hopper">
+                  <img src="img/samples/U1GM-2_1.png" alt="Ice Hopper" class="work-card-img">
+                  <div class="work-card-body">
+                    <h3 class="work-card-title">Ice Hopper</h3>
+                    <p class="work-card-description">Unity 1Week Game Jam 参加作品。</p>
+                    <div class="work-card-tools">
+                      <span class="work-card-tool-item">Unity <i class="fa-brands fa-unity"></i></span>
+                    </div>
+                  </div>
+                </div>
+                <!-- 音をつたえるあかりちゃん -->
+                <div class="work-card" data-modal-target="akari-puzzle">
+                  <img src="img/samples/Akari_puzzle2.png" alt="音をつたえるあかりちゃん" class="work-card-img">
+                  <div class="work-card-body">
+                    <h3 class="work-card-title">音をつたえるあかりちゃん</h3>
+                    <p class="work-card-description">音符を運んでギミックを動かす倉庫番。</p>
+                    <div class="work-card-tools">
+                      <span class="work-card-tool-item">Python <i class="fa-brands fa-python"></i></span>
+                    </div>
+                  </div>
+                </div>
+                <!-- TodoApp -->
+                <div class="work-card" data-modal-target="todo-app">
+                  <img src="img/samples/Todo_1.png" alt="TodoApp" class="work-card-img">
+                  <div class="work-card-body">
+                    <h3 class="work-card-title">TodoApp</h3>
+                    <p class="work-card-description">Reactで作成したシンプルな Todo アプリ。</p>
+                    <div class="work-card-tools">
+                      <span class="work-card-tool-item">React <i class="fa-brands fa-react"></i></span>
+                    </div>
+                  </div>
+                </div>
+                <!-- 殲滅サバイブ -->
+                <div class="work-card" data-modal-target="survive">
+                  <img src="img/samples/Survive.png" alt="殲滅サバイブ" class="work-card-img">
+                  <div class="work-card-body">
+                    <h3 class="work-card-title">殲滅サバイブ</h3>
+                    <p class="work-card-description">2023年度高専祭で展示したサバイバルゲーム。</p>
+                    <div class="work-card-tools">
+                      <span class="work-card-tool-item">Unity <i class="fa-brands fa-unity"></i></span>
+                    </div>
+                  </div>
+                </div>
+                <!-- お金がないなら集めればいい -->
+                <div class="work-card" data-modal-target="collect-money">
+                  <img src="img/samples/U1GM-1_3.png" alt="お金がないなら集めればいい" class="work-card-img">
+                  <div class="work-card-body">
+                    <h3 class="work-card-title">お金がないなら集めればいい</h3>
+                    <p class="work-card-description">Unity 1Week Game Jam 初参加作品。</p>
+                    <div class="work-card-tools">
+                      <span class="work-card-tool-item">Unity <i class="fa-brands fa-unity"></i></span>
+                    </div>
+                  </div>
+                </div>
+                <!-- ブログアプリ -->
+                <div class="work-card" data-modal-target="blog-app">
+                  <img src="img/samples/blog_1.png" alt="ブログアプリ" class="work-card-img">
+                  <div class="work-card-body">
+                    <h3 class="work-card-title">ブログアプリ</h3>
+                    <p class="work-card-description">Next.js と Supabase で作成したブログアプリ。</p>
+                    <div class="work-card-tools">
+                      <span class="work-card-tool-item">React <i class="fa-brands fa-react"></i></span>
+                    </div>
+                  </div>
+                </div>
+                <!-- シューティングゲーム -->
+                <div class="work-card" data-modal-target="shooting">
+                  <img src="img/samples/controller.jpg" alt="シューティングゲーム" class="work-card-img">
+                  <div class="work-card-body">
+                    <h3 class="work-card-title">シューティングゲーム</h3>
+                    <p class="work-card-description">2024年度高専祭で展示した Joy-Con で操作するシューティング。</p>
+                    <div class="work-card-tools">
+                      <span class="work-card-tool-item">Unity <i class="fa-brands fa-unity"></i></span>
+                    </div>
+                  </div>
+                </div>
+                <!-- じゃんけんシミュレーター -->
+                <div class="work-card" data-modal-target="rps">
+                  <img src="img/samples/RPS.png" alt="じゃんけんシミュレーター" class="work-card-img">
+                  <div class="work-card-body">
+                    <h3 class="work-card-title">じゃんけんシミュレーター</h3>
+                    <p class="work-card-description">Google Colab.で作成した CUI じゃんけんゲーム。</p>
+                    <div class="work-card-tools">
+                      <span class="work-card-tool-item">Python <i class="fa-brands fa-python"></i></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="links-section">
+        <div class="links-container wrapper">
+          <!-- 左側：タイポグラフィ画像 -->
+          <div class="links-left">
+            <img src="img/section-titles/Links.png" alt="Links" class="links-title">
+          </div>
+
+          <!-- 右側：各種リンク -->
+          <div class="links-right">
+            <ul class="link-list">
+              <li class="link-item">
+                <a href="https://twitter.com/yukineko_K1" target="_blank" rel="noopener noreferrer">
+                <img src="img/icons/twitter_icon.png" alt="Twitter" class="link-icon">
+                <p class="link-text">Twitter: @yukineko_K1</p>
+                </a>
+              </li>
+              <li class="link-item">
+                <a href="https://github.com/ykNe0372" target="_blank" rel="noopener noreferrer">
+                  <img src="img/icons/github_icon.png" alt="github" class="link-icon">
+                  <p class="link-text">GitHub: ykNe0372</p>
+                </a>
+              </li>
+              <li class="link-item">
+                <a href="https://qiita.com/ykNe0372" target="_blank" rel="noopener noreferrer">
+                  <img src="img/icons/qiita_icon.png" alt="qiita" class="link-icon">
+                  <p class="link-text">Qiita: ykNe0372</p>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
     </article>
   </div>
 
@@ -415,8 +455,8 @@
       <nav>
         <ul class="footer-nav">
           <li><a href="#home" class="underline_anim">Home</a></li>
-          <li><a href="#works" class="underline_anim">Works</a></li>
           <li><a href="#skills" class="underline_anim">Skills</a></li>
+          <li><a href="#works" class="underline_anim">Works</a></li>
           <li><a href="#links" class="underline_anim">Links</a></li>
         </ul>
       </nav>
@@ -424,7 +464,7 @@
 
     <!-- copy right -->
     <div class="wrapper">
-      <p><small>&copy; 2025 ykNe0372</small></p>
+      <p><small>&copy; 2026 ykNe0372</small></p>
       <p>
         <small>&copy; LoadingIcons by
           <a href="https://icons8.com/">icons8.com</a></small>
