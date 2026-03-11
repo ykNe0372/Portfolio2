@@ -65,7 +65,7 @@ li {
 
 .wrapper {
     font-size: 1.2rem;
-    max-width: 90%;
+    /* max-width: 90%; */
     margin: 0 auto;
     padding: 0 4%;
 }
@@ -379,6 +379,12 @@ article {
 } */
 
 /* --- AboutMe --- */
+.aboutme-section {
+    background-image: url(/img/backgrounds/AboutMe.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
 .aboutme-container {
     display: grid;
     grid-template-columns: 1fr;
@@ -389,6 +395,7 @@ article {
 
 .aboutme-left {
     display: flex;
+    padding-top: 2%;
 }
 
 .aboutme-title {
@@ -398,7 +405,6 @@ article {
 }
 
 .aboutme-right {
-    background: #fffef9;
     padding-left: 20%;
     display: flex;
     flex-direction: column;
@@ -444,7 +450,7 @@ article {
 .history-list::before {
     content: "";
     position: absolute;
-    left: 32rem; /* 縦線の位置を調整 */
+    left: 35rem; /* 縦線の位置を調整 */
     top: -3%;
     width: 3px;
     background: #00A5BF;
@@ -459,7 +465,7 @@ article {
 .history-item::before {
     content: "";
     position: absolute;
-    left: 32rem; /* 縦線の中央に●を配置 */
+    left: 35rem; /* 縦線の中央に●を配置 */
     top: 0.4em; /* テキストの高さに合わせて微調整 */
     width: 10px;
     height: 10px;
@@ -474,11 +480,11 @@ article {
     position: absolute;
     top: 0;
     right: 0;
-    width: 5rem;
+    width: 12rem;
     text-align: left;
 }
 .history-content {
-    padding-right: 10rem;
+    padding-right: 18rem;
 }
 
 /* ----- skills ----- */
@@ -520,8 +526,8 @@ article {
 }
 
 .skill-icon {
-    width: 120px;
-    height: 120px;
+    width: 100px;
+    height: 100px;
     object-fit: contain;
     flex-shrink: 0; /* 画像が縮まないようにする */
 }
