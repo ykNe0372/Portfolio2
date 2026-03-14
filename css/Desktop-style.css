@@ -436,12 +436,23 @@ article {
 }
 
 /* --- History --- */
+.history-section {
+    background-image: url(/img/backgrounds/History.png);
+    /* background-size: cover;
+    background-repeat: no-repeat; */
+}
+
 .history-container {
     display: grid;
     grid-template-columns: 1fr 2fr;
     align-items: start;
-    margin-top: 3vw;
+    padding-top: 3vw;
 }
+
+.history-left {
+    padding-top: 15%;
+}
+
 .history-list {
     position: relative;
     list-style: none;
