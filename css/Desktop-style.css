@@ -380,7 +380,7 @@ article {
 
 /* --- AboutMe --- */
 .aboutme-section {
-    background-image: url(/img/backgrounds/AboutMe.png);
+    /* background-image: url(/img/backgrounds/AboutMe.png); */
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -436,11 +436,11 @@ article {
 }
 
 /* --- History --- */
-.history-section {
-    background-image: url(/img/backgrounds/History.png);
+/* .history-section {
+    /* background-image: url(/img/backgrounds/History.png); */
     /* background-size: cover;
     background-repeat: no-repeat; */
-}
+/* } */
 
 .history-container {
     display: grid;
