@@ -1,6 +1,23 @@
 document.addEventListener('DOMContentLoaded', () => {
   // 各作品の詳細データ
   const worksData = {
+    'urasoroe': {
+      title: '<i class="fa-brands fa-discord"></i> ウラソロエ',
+      altText: 'ウラソロエ',
+      images: ['img/samples/urasoroe_title.png', 'img/samples/urasoroe_result.png', 'img/samples/urasoroe_achieve.png'],
+      videos: ['video/urasoroe.mp4'],
+      description: `
+        <p>2026年3月末に開催された、Unity 1 Week GAME JAM（お題「うら」）の参加作品です。友人と2人で参加しました。</p>
+        <p>表面に柄が描かれているカードおり、2枚裏返して「柄」と「色」が一致すれば、カードを取得することが出来る神経衰弱のようなゲームです。</p>
+        <p>今回は神経衰弱部分のプログラムと画像素材の作成を担当しました。カードやボタン、カウントダウン時のデザインなども描きました。</p>
+        <p>友人が作成した実績要素はかなり応用が利きそうなので、今後のゲーム制作にも追加していきたいと考えています！</p>
+      `,
+      period: '1週間',
+      dev: 'Unity',
+      links: [
+        { url: 'https://unityroom.com/games/urasoroe', text: 'unityroom でプレイする' }
+      ]
+    },
     'discord-bot': {
       title: '<i class="fa-brands fa-discord"></i> ひまつぶしbotくん',
       altText: 'ひまつぶしbotくん',
