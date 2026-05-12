@@ -419,19 +419,19 @@ article {
 }
 
 .aboutme-icon {
-    width: clamp(80px, 15vw, 200px);
-    height: clamp(80px, 15vw, 200px);
+    width: clamp(150px, 25vw, 250px);
+    height: clamp(150px, 25vw, 250px);
     aspect-ratio: 1;
     object-fit: cover;
     border-radius: 10px;
-    border: 8px double #FFD1D7;
+    border: 3px solid #00A5BF;
     flex-shrink: 0;  /* 幅を固定 */
 }
 
 .aboutme-introduce {
     flex: 1;
     margin: auto 0;
-    padding-top: 3%;
+    padding-top: 2%;
     font-size: 1.2rem;
 }
 
