@@ -37,10 +37,10 @@ document.addEventListener('DOMContentLoaded', () => {
     'color-run': {
       title: '<i class="fa-solid fa-person-running"></i> Color Run',
       altText: 'colorRun',
-      images: [],
-      videos: [],
+      images: ['img/samples/color_1.png', 'img/samples/color_2.png'],
+      videos: ['video/color_run.mp4'],
       description:`
-        <p>プレイヤーの色と障害物の色を合わせることで、障害物にぶつからなくなるランゲームです。（現状ステージと一部 UI が未完成）</p>
+        <p>プレイヤーの色と障害物の色を合わせることで、障害物にぶつからなくなるランゲームです。（現状ステージと UI が未完成）</p>
         <p>個人で Unity のゲームを作ったことが無いことに気付き、1ヶ月ほど毎日コツコツと開発をした作品です。
         個人で長期的に開発できる環境だったため、単一責任の原則を意識しながら作成してみました。
         ファイル数は非常に多くなりますが、現在行なっている卒業研究でのゲーム開発でも活用できているため、良い練習機会になりました。</p>
