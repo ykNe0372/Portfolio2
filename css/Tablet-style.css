@@ -49,28 +49,46 @@
 
     .wrapper {
         font-size: 1.075rem;
-        max-width: 750px;
+        max-width: 700px;
         margin: 0 auto;
         padding: 0 4%;
     }
 
     /* ----- hedaer ----- */
     .title {
-        margin-top: 40px;
-        font-size: 1.75rem;
+        margin-top: 28px;
     }
 
     .main-nav {
         display: flex;
         font-size: 1.35rem;
-        margin-top: 40px;
+        margin-top: 32px;
+        margin-left: 10px;
         list-style: none;
     }
     .main-nav li {
-        margin-left: 60px;
+        margin: auto 30px;
     }
     .main-nav a {
         color: #432;
+    }
+
+    .page-header {
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        display: flex;
+        justify-content: space-between;
+        background-color: rgba(255, 254, 249, 0.85);
+        backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(5px);
+        border-bottom: 2px solid #d1dce2;
+    }
+
+    .header-logo {
+        width: auto;
+        height: 90px;
+        padding: 8% 0 3% 8%;
     }
 
     .footer-nav {
@@ -83,11 +101,6 @@
     }
     .footer-nav a {
         color: #432;
-    }
-
-    .page-header {
-        display: flex;
-        justify-content: space-between;
     }
 
     /* ----- title ----- */
@@ -117,7 +130,7 @@
         box-sizing: content-box;
         max-width: 750px;
         margin: 0 auto;
-        padding: 0 10rem;
+        padding: 0;
     }
 
     /* ----- opening animation ----- */
@@ -190,7 +203,6 @@
     }
 
     /* ----- main ----- */
-
     article {
         width: 90%;
     }
@@ -254,6 +266,64 @@
         padding: 25px;
     }
 
+    /* ----- AboutMe ----- */
+    .aboutme-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    .aboutme-left {
+        padding-top: 0;
+    }
+    .aboutme-title {
+        max-width: 100%;
+        height: auto;
+        max-height: 200px;
+        margin: 0 auto;
+    }
+    .aboutme-right {
+        padding-left: 0;
+    }
+    .aboutme-top {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        gap: 1.5rem;
+    }
+    .aboutme-icon {
+        width: clamp(120px, 22vw, 180px);
+        height: clamp(120px, 22vw, 180px);
+        aspect-ratio: 1;
+        object-fit: cover;
+        border-radius: 10px;
+        border: 2px solid #00A5BF;
+        flex-shrink: 0;  /* 幅を固定 */
+    }
+    .aboutme-introduce {
+        margin: 0;
+        padding-top: 0;
+        font-size: 1.1rem;
+    }
+
+
+    .history-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    .history-left {
+        padding-top: 0;
+    }
+    .history-title {
+        display: block;
+        max-width: 100%;
+        height: auto;
+        max-height: 200px;
+        margin: 0 auto;
+    }
+    .history-right{
+        padding-left: 0;
+    }
     .history-list {
         list-style: none;
         padding: 0;
@@ -263,22 +333,24 @@
     .history-list::before {
         content: "";
         position: absolute;
-        top: 0;
+        top: -3%;
         bottom: 0;
-        left: 7.5rem; /* 日付の幅に合わせて調整 */
+        left: 6rem;
         width: 3px;
         background: #00A5BF;
         transform: translateX(-50%);
     }
     .history-item {
         position: relative;
-        padding-left: 10.5rem; /* 縦線より右側に配置 */
+        display: flex;
+        align-items: flex-start;
+        gap: 1rem;
         margin-bottom: 2rem;
     }
     .history-item::before {
         content: "";
         position: absolute;
-        left: 7.5rem; /* 縦線の中央に配置 */
+        left: 6rem;
         top: 0.4em; /* テキストの高さに合わせて微調整 */
         width: 10px;
         height: 10px;
@@ -290,16 +362,43 @@
         display: none;
     }
     .history-date {
-        position: absolute;
-        left: 0;
-        width: 6rem; /* 日付の表示幅 */
+        width: 5rem;
         text-align: right;
+        flex-shrink: 0;
+    }
+    .history-content {
+        margin-left: 7%;
+        flex: 1;
+        min-width: 0;
     }
 
     /* ----- works ----- */
+    .works-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .works-left {
+        padding-top: 0;
+    }
+
     .works-title {
-        font-size: 1.4rem;
-        margin: 5% 0 2% 0;
+        display: block;
+        max-width: 100%;
+        height: auto;
+        max-height: 200px;
+        margin: 0 auto;
+    }
+
+    .works-right{
+        padding-left: 0;
+    }
+
+    .works-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 1rem;
     }
 
     .container {
@@ -363,6 +462,24 @@
     }
 
     /* ----- skills ----- */
+    .skills-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    .skills-left {
+        padding-top: 0;
+    }
+    .skills-title {
+        display: block;
+        max-width: 100%;
+        height: auto;
+        max-height: 200px;
+        margin: 0 auto;
+    }
+    .skills-right{
+        padding-left: 0;
+    }
     .skills-list {
         display: grid;
         gap: 20px;
@@ -377,7 +494,6 @@
         border: 2px solid #ddd;
         border-radius: 10px;
         background-color: #fffef9;
-        box-shadow: rgba(0, 0, 0, 0.15) 3px 5px 5px;
     }
     .skill-icon {
         width: 70px;
@@ -431,27 +547,48 @@
     }
 
     /* ----- links ----- */
+    .links-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    .links-left {
+        padding-top: 0;
+    }
+    .links-title {
+        display: block;
+        max-width: 100%;
+        height: auto;
+        max-height: 200px;
+        margin: 0 auto;
+    }
+    .links-right{
+        padding-left: 0;
+    }
     .link-list {
         display: flex;
         justify-content: center;
-        gap: 120px;
+        gap: 50px;
         list-style: none;
         padding: 0;
         margin-top: 20px;
     }
     .link-item a {
         display: flex;
-        flex-direction: column; /* アイコンとテキストを縦に並べる */
-        align-items: center; /* 中央揃えにする */
-        gap: 8px; /* アイコンとテキストの間のスペース */
-        transition: transform 0.3s ease; /* ホバー時のアニメーション */
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+        transition: transform 0.3s ease;
+    }
+    .link-item p {
+        display: none;
     }
     .link-item a:hover {
-        transform: scale(1.1); /* ホバー時に少し拡大する */
+        transform: scale(1.1);
     }
     .link-icon {
-        width: 100px;
-        height: 100px;
+        width: 90px;
+        height: 90px;
         object-fit: contain;
     }
     .link-text {
