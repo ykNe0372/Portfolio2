@@ -292,7 +292,6 @@ li {
 }
 
 /* ----- main ----- */
-
 article {
     width: 90%;
     margin: 0 auto;
@@ -424,7 +423,7 @@ article {
     aspect-ratio: 1;
     object-fit: cover;
     border-radius: 10px;
-    border: 3px solid #00A5BF;
+    border: 2px solid #00A5BF;
     flex-shrink: 0;  /* 幅を固定 */
 }
 
@@ -436,21 +435,36 @@ article {
 }
 
 /* --- History --- */
-/* .history-section {
+.history-section {
     /* background-image: url(/img/backgrounds/History.png); */
-    /* background-size: cover;
-    background-repeat: no-repeat; */
-/* } */
+    background-size: cover;
+    background-repeat: no-repeat;
+}
 
 .history-container {
     display: grid;
-    grid-template-columns: 1fr 2fr;
-    align-items: start;
-    padding-top: 3vw;
+    grid-template-columns: 1fr;
+    align-items: stretch;
+    gap: 0;
+    position: relative;
+}
+
+.history-title {
+    max-width: 100%;
+    height: auto;
+    max-height: 280px;
 }
 
 .history-left {
-    padding-top: 15%;
+    display: flex;
+    padding-top: 0;
+}
+
+.history-right {
+    padding-left: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
 }
 
 .history-list {
@@ -461,8 +475,8 @@ article {
 .history-list::before {
     content: "";
     position: absolute;
-    left: 35rem; /* 縦線の位置を調整 */
-    top: -3%;
+    left: 6rem; /* 年月と内容の間のスペースに配置 */
+    top: -2%;
     width: 3px;
     background: #00A5BF;
     height: 110%;
@@ -471,12 +485,14 @@ article {
 .history-item {
     position: relative;
     margin-bottom: 1.85rem;
-    text-align: right;
+    display: flex;
+    align-items: flex-start;
+    gap: 3rem;
 }
 .history-item::before {
     content: "";
     position: absolute;
-    left: 35rem; /* 縦線の中央に●を配置 */
+    left: 6rem; /* 年月と内容の間のスペースに配置 */
     top: 0.4em; /* テキストの高さに合わせて微調整 */
     width: 10px;
     height: 10px;
@@ -488,14 +504,14 @@ article {
     display: none;
 }
 .history-date {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 12rem;
-    text-align: left;
+    width: 4rem;
+    text-align: right;
+    flex-shrink: 0;
 }
 .history-content {
-    padding-right: 18rem;
+    margin-left: 5%;
+    flex: 1;
+    text-align: left;
 }
 
 /* ----- skills ----- */
@@ -715,15 +731,28 @@ article {
 }
 
 /* ----- links ----- */
+.links-section {
+    position: relative;
+    overflow: hidden;
+}
+
 .links-container {
     display: grid;
-    grid-template-columns: 3fr 7fr;
-    align-items: start;
-    margin-top: 3vw;
+    grid-template-columns: 1fr;
+    align-items: stretch;
+    gap: 0;
+    position: relative;
+}
+
+.links-title {
+    max-width: 100%;
+    height: auto;
+    max-height: 280px;
 }
 
 .links-right {
-    margin-top: 3rem;
+    background: #fffef9;
+    padding-left: 10rem;
 }
 
 .link-list {
@@ -734,21 +763,25 @@ article {
     padding: 0;
     margin-top: 20px;
 }
+
 .link-item a {
     display: flex;
-    flex-direction: column; /* アイコンとテキストを縦に並べる */
-    align-items: center; /* 中央揃えにする */
-    gap: 8px; /* アイコンとテキストの間のスペース */
-    transition: transform 0.3s ease; /* ホバー時のアニメーション */
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    transition: transform 0.3s ease;
 }
+
 .link-item a:hover {
-    transform: scale(1.1); /* ホバー時に少し拡大する */
+    transform: scale(1.1);
 }
+
 .link-icon {
     width: 100px;
     height: 100px;
     object-fit: contain;
 }
+
 .link-text {
     font-size: 1.2rem;
     margin: 0;
